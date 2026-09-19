@@ -20,6 +20,12 @@
 .intro h2{color:#000;font-weight:700;font-size:24px;line-height:1.3}
 .intro .intro-copy p{color:#656b73;font-size:clamp(18px,1.55vw,22px);font-weight:400;line-height:1.65;letter-spacing:normal}
 .intro .intro-copy p+p{margin-top:24px}
+
+/* Headset explorer is scoped to this section. */
+.hx{padding-top:70px;background:#fff}.hx .section-heading{max-width:850px;margin-bottom:32px}.hx .section-heading h2{font-size:clamp(36px,5vw,62px);letter-spacing:-.05em}.hx .eyebrow{font-size:12px;color:#1565d8;margin-bottom:12px}.hx-shell{border:1px solid #dfe3e8;border-radius:28px;overflow:hidden;background:#f5f6f8}.hx-topbar{display:flex;align-items:center;justify-content:space-between;padding:20px 26px;border-bottom:1px solid #e0e3e8;gap:14px;flex-wrap:wrap}.hx-topbar strong{font-size:17px}.hx-views{display:flex;flex-wrap:wrap;gap:5px}.hx button{font:inherit;cursor:pointer}.hx-views button,.hx-tools button{font-size:12px;border:1px solid #d7dce3;background:#fff;color:#454e5c;border-radius:30px;padding:9px 13px;min-height:40px}.hx button[aria-pressed=true]{background:#1565d8;color:white;border-color:#1565d8}.hx button:focus-visible{outline:3px solid #1565d8;outline-offset:4px}.hx-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px}.hx-model{position:relative;min-width:0}.hx-stage{height:480px;position:relative;touch-action:pan-y;cursor:grab;background:radial-gradient(ellipse at 50% 42%,#fff,#eef0f4)}.hx-stage canvas{width:100%;height:100%;display:block}.hx-stage:active{cursor:grabbing}.hx-overlay{position:absolute;inset:0;pointer-events:none;overflow:hidden}.hx-hotspot{position:absolute;width:44px;height:44px;border:0;background:transparent;border-radius:50%;transform:translate(-50%,-50%);pointer-events:auto;padding:5px;color:#1565d8;z-index:2}.hx-hotspot span{display:grid;place-items:center;width:34px;height:34px;background:#fff;border:2px solid #1565d8;border-radius:50%;font-size:12px;font-weight:750;box-shadow:0 2px 8px #1e47862a}.hx-hotspot[aria-pressed=true]{background:transparent!important}.hx-hotspot[aria-pressed=true] span{background:#1565d8;color:#fff;box-shadow:0 0 0 6px #1565d81f}.hx-lines{position:absolute;width:100%;height:100%;overflow:visible}.hx-lines line{stroke:#1565d8;stroke-width:1.5}.hx-tools{padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.hx-tools p{font-size:12px;color:#66717e;margin:0}.hx-tools div{display:flex;gap:6px}.hx-detail{background:#fff;padding:32px 26px;display:flex;flex-direction:column;border-left:1px solid #e0e3e8}.hx-tag{font-size:11px;letter-spacing:.1em;color:#1565d8;text-transform:uppercase;font-weight:750}.hx-detail h3{font-size:29px;margin:18px 0 12px}.hx-location{font-size:12px;color:#66717e;padding-bottom:20px;border-bottom:1px solid #e0e3e8}.hx-description{font-size:16px;line-height:1.7;color:#454e5c;margin:12px 0 28px}.hx-count{margin-top:auto;font-size:12px;color:#66717e}.hx-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:20px}.hx-list button{text-align:left;display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #e0e3e8;border-radius:12px;background:white;font-size:13px;min-height:48px;color:#454e5c}.hx-list button span{font-size:11px;font-weight:700;color:#1565d8;min-width:20px}.hx-list button[aria-pressed=true] span{color:white}.hx-note{font-size:12px!important;color:#66717e;margin:16px 0 0}.hx-fallback{position:absolute;inset:18% 10%;font-size:16px;text-align:center;color:#454e5c;padding:36px 0}.hx [hidden]{display:none!important}.hx button:disabled{opacity:.45;cursor:default}
+@media(max-width:800px){.hx-layout{grid-template-columns:1fr}.hx-detail{border-left:0;border-top:1px solid #e0e3e8;padding:24px;min-height:290px}.hx-stage{height:400px}.hx-list{grid-template-columns:repeat(2,minmax(0,1fr))}.hx-topbar{padding:18px}.hx-detail h3{font-size:26px}.hx-description{margin-bottom:10px}.hx-count{margin-top:12px}}
+@media(max-width:420px){.hx-stage{height:340px}.hx-list button{font-size:12px;padding:10px;gap:5px}.hx-views button{padding:8px 10px}.hx-topbar{gap:10px}.hx-tools{padding:14px}.hx-shell{border-radius:20px}}
+
 </style>
 </head>
 <body>
@@ -62,32 +68,10 @@
 </div></section>
 
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">The main parts</p>
-          <h2>One headset. Two controllers. A safe space.</h2>
-          <p>These parts work together. The headset shows the experience. The controllers help you select and move items.</p>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <span class="number">1</span>
-            <h3>Headset</h3>
-            <p>The headset sits over your eyes. It tracks where you look and how you move your head.</p>
-          </article>
-          <article class="card">
-            <span class="number">2</span>
-            <h3>Controllers</h3>
-            <p>You hold one controller in each hand. They help you point, select, move, and hold digital items.</p>
-          </article>
-          <article class="card">
-            <span class="number">3</span>
-            <h3>Play area</h3>
-            <p>The headset asks you to set a safe area. Clear the floor before anyone starts.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+<section class="section hx" id="headset-explorer" aria-labelledby="hx-heading"><div class="container">
+<div class="section-heading"><p class="eyebrow">Explore your headset</p><h2 id="hx-heading">A closer look at Quest 3.</h2><p>Select a numbered point to discover what each button and part does.</p></div>
+<div class="hx-shell"><div class="hx-topbar"><strong>Meta Quest 3</strong><div class="hx-views" aria-label="Headset views"><button type="button" data-hx-view="front" aria-pressed="true">Front</button><button type="button" data-hx-view="left" aria-pressed="false">Left</button><button type="button" data-hx-view="right" aria-pressed="false">Right</button><button type="button" data-hx-view="bottom" aria-pressed="false">Underside</button><button type="button" data-hx-view="inside" aria-pressed="false">Inside</button><button type="button" data-hx-view="strap" aria-pressed="false">Strap</button></div></div><div class="hx-layout"><div class="hx-model"><div class="hx-stage" tabindex="0" role="group" aria-label="Interactive headset model. Use left and right arrow keys to rotate; up and down to tilt." aria-describedby="hx-hint"><div class="hx-fallback" role="status">Loading the headset…<br>You can already explore every part using the buttons below.</div><div class="hx-overlay"><svg class="hx-lines" aria-hidden="true"></svg></div></div><div class="hx-tools"><p id="hx-hint">Drag sideways to rotate · Select a point to learn</p><div><button type="button" data-hx-zoom="-1" aria-label="Zoom out">−</button><button type="button" data-hx-zoom="1" aria-label="Zoom in">+</button><button type="button" id="hx-reset">Reset view</button></div></div></div><aside id="hx-detail" class="hx-detail" aria-live="polite" aria-atomic="true"><span class="hx-tag">Camera</span><h3>Passthrough cameras</h3><p class="hx-location">Front · two outer sensor windows</p><p class="hx-description">These color cameras show the room around you inside the headset.</p><span class="hx-count">09 / 14 · Explore every part below</span></aside></div></div>
+<div class="hx-list" aria-label="All headset buttons and parts"><button type="button" data-hx-part="power" aria-controls="hx-detail" aria-pressed="false"><span>01</span>Power button</button><button type="button" data-hx-part="up" aria-controls="hx-detail" aria-pressed="false"><span>02</span>Volume + button</button><button type="button" data-hx-part="down" aria-controls="hx-detail" aria-pressed="false"><span>03</span>Volume − button</button><button type="button" data-hx-part="ipd" aria-controls="hx-detail" aria-pressed="false"><span>04</span>Lens adjustment wheel</button><button type="button" data-hx-part="relief-left" aria-controls="hx-detail" aria-pressed="false"><span>05</span>Left eye-relief button</button><button type="button" data-hx-part="relief-right" aria-controls="hx-detail" aria-pressed="false"><span>06</span>Right eye-relief button</button><button type="button" data-hx-part="usb" aria-controls="hx-detail" aria-pressed="false"><span>07</span>USB-C port</button><button type="button" data-hx-part="audio" aria-controls="hx-detail" aria-pressed="false"><span>08</span>3.5 mm audio jack</button><button type="button" data-hx-part="cameras" aria-controls="hx-detail" aria-pressed="false"><span>09</span>Passthrough cameras</button><button type="button" data-hx-part="depth" aria-controls="hx-detail" aria-pressed="false"><span>10</span>Depth sensor</button><button type="button" data-hx-part="tracking" aria-controls="hx-detail" aria-pressed="false"><span>11</span>Tracking cameras</button><button type="button" data-hx-part="speakers" aria-controls="hx-detail" aria-pressed="false"><span>12</span>Built-in speakers</button><button type="button" data-hx-part="lenses" aria-controls="hx-detail" aria-pressed="false"><span>13</span>Pancake lenses</button><button type="button" data-hx-part="strap" aria-controls="hx-detail" aria-pressed="false"><span>14</span>Head strap</button></div><p class="hx-note">Interactive learning illustration; not an official product model. Left and right refer to the person wearing the headset.</p><noscript><p>Enable JavaScript to rotate the model and explore its parts.</p><dl><dt>Power button</dt><dd>Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.</dd><dt>Volume + button</dt><dd>Press the + end of the volume rocker to increase the headset audio volume.</dd><dt>Volume − button</dt><dd>Press the − end of the volume rocker to decrease the headset audio volume.</dd><dt>Lens adjustment wheel</dt><dd>Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.</dd><dt>Left eye-relief button</dt><dd>Take off the headset. Hold this button and slide this side of the facial interface to change the distance between your eyes and the lenses. Use the same depth setting on both sides.</dd><dt>Right eye-relief button</dt><dd>Hold this button to adjust the other side of the facial interface. Match the left side so the headset sits evenly, with room for your glasses if needed.</dd><dt>USB-C port</dt><dd>Connect the charging cable here to charge the headset. This port can also connect the headset to a compatible PC with a supported USB cable.</dd><dt>3.5 mm audio jack</dt><dd>Plug in compatible wired headphones for personal audio.</dd><dt>Passthrough cameras</dt><dd>These color cameras show the room around you inside the headset. They make it possible to see physical surroundings alongside digital content.</dd><dt>Depth sensor</dt><dd>Measures the distance to nearby surfaces to help the headset understand the shape of your room.</dd><dt>Tracking cameras</dt><dd>Help track the headset, hands and controllers as they move. Keep the camera windows clear. Quest 3 does not track your eye movements.</dd><dt>Built-in speakers</dt><dd>Play headset audio without separate headphones. Use the volume buttons to adjust the sound.</dd><dt>Pancake lenses</dt><dd>Focus the displays so you can see the virtual scene. Use the lens adjustment wheel to set the spacing, and the eye-relief buttons to adjust the viewing distance.</dd><dt>Head strap</dt><dd>Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.</dd></dl></noscript></div></section>
 
     <section class="section soft">
       <div class="container">
@@ -193,6 +177,128 @@ stage.addEventListener('pointermove',e=>{const prev=pointers.get(e.pointerId);if
 for(const event of ['pointerup','pointercancel'])stage.addEventListener(event,e=>{pointers.delete(e.pointerId);lastDistance=0;});
 stage.addEventListener('wheel',e=>{e.preventDefault();scale=Math.max(.7,Math.min(1.45,scale-e.deltaY*.001));zoom.value=Math.round(scale*100);draw();},{passive:false});resize();
 }catch(e){status.textContent='The 3D preview could not load.';root.querySelector('.model-fallback').hidden=false;root.querySelectorAll('.product-controls button,.product-controls input').forEach(el=>el.disabled=true);}
+
+</script>
+<script type="module">
+
+// Text controls initialize before WebGL, and remain usable if the model fails.
+const hx=document.getElementById('headset-explorer');
+const parts=[{"id": "power", "name": "Power button", "kind": "Button", "location": "Left side of the headset", "text": "Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.", "pos": [1.78, 0.17, 0.11], "normal": [1, 0, 0], "view": "left"}, {"id": "up", "name": "Volume + button", "kind": "Button", "location": "Underside \u00b7 volume rocker", "text": "Press the + end of the volume rocker to increase the headset audio volume.", "pos": [-0.81, -0.94, 0.04], "normal": [0, -1, 0], "view": "bottom", "offset": [35, -35]}, {"id": "down", "name": "Volume \u2212 button", "kind": "Button", "location": "Underside \u00b7 volume rocker", "text": "Press the \u2212 end of the volume rocker to decrease the headset audio volume.", "pos": [-1.1, -0.94, 0.04], "normal": [0, -1, 0], "view": "bottom", "offset": [-35, 35]}, {"id": "ipd", "name": "Lens adjustment wheel", "kind": "Adjustment", "location": "Underside \u00b7 opposite the volume rocker", "text": "Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.", "pos": [0.95, -0.93, 0.04], "normal": [0, -1, 0], "view": "bottom"}, {"id": "relief-left", "name": "Left eye-relief button", "kind": "Adjustment button", "location": "Inside \u00b7 left edge of the facial interface", "text": "Take off the headset. Hold this button and slide this side of the facial interface to change the distance between your eyes and the lenses. Use the same depth setting on both sides.", "pos": [1.47, 0.22, -0.63], "normal": [0, 0, -1], "view": "inside"}, {"id": "relief-right", "name": "Right eye-relief button", "kind": "Adjustment button", "location": "Inside \u00b7 right edge of the facial interface", "text": "Hold this button to adjust the other side of the facial interface. Match the left side so the headset sits evenly, with room for your glasses if needed.", "pos": [-1.47, 0.22, -0.63], "normal": [0, 0, -1], "view": "inside"}, {"id": "usb", "name": "USB-C port", "kind": "Port", "location": "Left strap arm", "text": "Connect the charging cable here to charge the headset. This port can also connect the headset to a compatible PC with a supported USB cable.", "pos": [1.96, 0.03, -0.42], "normal": [1, 0, 0], "view": "left", "offset": [-30, -45]}, {"id": "audio", "name": "3.5 mm audio jack", "kind": "Port", "location": "Right strap arm", "text": "Plug in compatible wired headphones for personal audio.", "pos": [-1.96, 0.04, -0.42], "normal": [-1, 0, 0], "view": "right"}, {"id": "cameras", "name": "Passthrough cameras", "kind": "Cameras", "location": "Front \u00b7 two outer sensor windows", "text": "These color cameras show the room around you inside the headset. They make it possible to see physical surroundings alongside digital content.", "pos": [0.73, -0.2, 0.57], "normal": [0, 0, 1], "view": "front"}, {"id": "depth", "name": "Depth sensor", "kind": "Sensor", "location": "Front \u00b7 center sensor window", "text": "Measures the distance to nearby surfaces to help the headset understand the shape of your room.", "pos": [0, -0.34, 0.57], "normal": [0, 0, 1], "view": "front", "offset": [0, 48]}, {"id": "tracking", "name": "Tracking cameras", "kind": "Cameras", "location": "Front and lower outer edges", "text": "Help track the headset, hands and controllers as they move. Keep the camera windows clear. Quest 3 does not track your eye movements.", "pos": [-1.72, -0.4, 0.25], "normal": [-0.6, 0, 0.8], "view": "front"}, {"id": "speakers", "name": "Built-in speakers", "kind": "Audio", "location": "Both strap arms \u00b7 near your ears", "text": "Play headset audio without separate headphones. Use the volume buttons to adjust the sound.", "pos": [-1.91, -0.12, -0.67], "normal": [-1, 0, 0], "view": "right", "offset": [35, 40]}, {"id": "lenses", "name": "Pancake lenses", "kind": "Optics", "location": "Inside \u00b7 in front of your eyes", "text": "Focus the displays so you can see the virtual scene. Use the lens adjustment wheel to set the spacing, and the eye-relief buttons to adjust the viewing distance.", "pos": [-0.82, 0.03, -0.65], "normal": [0, 0, -1], "view": "inside", "offset": [0, 45]}, {"id": "strap", "name": "Head strap", "kind": "Fit adjustment", "location": "Top and back of the headset", "text": "Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.", "pos": [0, 1.5, -1.28], "normal": [0, 1, 0], "view": "strap"}];
+const detail=hx.querySelector('.hx-detail');
+let selectView=()=>{},selected='cameras';
+function selectPart(id,rotate=true){
+ const p=parts.find(p=>p.id===id);if(!p)return;selected=id;
+ detail.querySelector('.hx-tag').textContent=p.kind;
+ detail.querySelector('h3').textContent=p.name;
+ detail.querySelector('.hx-location').textContent=p.location;
+ detail.querySelector('.hx-description').textContent=p.text;
+ detail.querySelector('.hx-count').textContent=String(parts.indexOf(p)+1).padStart(2,'0')+' / '+parts.length+' · Explore every part below';
+ hx.querySelectorAll('[data-hx-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hxPart===id)));
+ if(rotate)selectView(p.view);
+}
+hx.querySelectorAll('.hx-list button').forEach(b=>b.addEventListener('click',()=>selectPart(b.dataset.hxPart)));
+selectPart('cameras',false);
+const stage=hx.querySelector('.hx-stage'),fallback=hx.querySelector('.hx-fallback');
+try{
+ const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js');
+ const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+ renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+ renderer.domElement.setAttribute('aria-hidden','true');stage.prepend(renderer.domElement);
+ const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(34,1,.1,100);camera.position.set(0,0,9.5);
+scene.add(new THREE.HemisphereLight(0xffffff,0x777985,1.6));
+for(const [x,y,z,power] of [[-4,6,6,70],[5,2,1,40],[0,4,-5,65]]){const l=new THREE.PointLight(0xffffff,power);l.position.set(x,y,z);scene.add(l);}
+const group=new THREE.Group();scene.add(group);
+// Physical product materials retain the headset's white shell and dark optics.
+const shell=new THREE.MeshStandardMaterial({color:0xe9eaf0,roughness:.4,metalness:.02});
+const weaveCanvas=document.createElement('canvas');weaveCanvas.width=weaveCanvas.height=128;const wc=weaveCanvas.getContext('2d');wc.fillStyle='#b9b9be';wc.fillRect(0,0,128,128);for(let y=0;y<128;y+=4)for(let x=0;x<128;x+=4){wc.fillStyle=(x+y)%8===0?'#ededf0':'#d2d2d9';wc.fillRect(x,y,2,3);}const weave=new THREE.CanvasTexture(weaveCanvas);weave.wrapS=weave.wrapT=THREE.RepeatWrapping;weave.repeat.set(4,1);weave.anisotropy=8;
+const strap=new THREE.MeshStandardMaterial({color:0xf0f0f4,map:weave,bumpMap:weave,bumpScale:.012,roughness:.95,side:THREE.DoubleSide});
+const seam=new THREE.MeshStandardMaterial({color:0x696b78,roughness:.8});
+const cushion=new THREE.MeshStandardMaterial({color:0x303039,roughness:1});
+const black=new THREE.MeshStandardMaterial({color:0x080a12,roughness:.25,metalness:.12});
+const glass=new THREE.MeshPhysicalMaterial({color:0x15172b,metalness:.3,roughness:.16,clearcoat:1});
+function rounded(w,h,r,d,mat,x=0,y=0,z=0){r=Math.min(r,w/2,h/2);const s=new THREE.Shape();s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);const b=Math.min(.025,w*.06,h*.06);const geo=new THREE.ExtrudeGeometry(s,{depth:d,bevelEnabled:true,bevelSegments:4,steps:1,bevelSize:b,bevelThickness:b,curveSegments:24});geo.translate(0,0,-d/2);const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);group.add(m);return m;}
+function contour(){const s=new THREE.Shape();s.moveTo(0,.91);s.bezierCurveTo(.79,.91,1.4,.85,1.65,.5);s.bezierCurveTo(1.86,.23,1.85,-.22,1.65,-.5);s.bezierCurveTo(1.38,-.82,.78,-.84,0,-.84);s.bezierCurveTo(-.78,-.84,-1.38,-.82,-1.65,-.5);s.bezierCurveTo(-1.85,-.22,-1.86,.23,-1.65,.5);s.bezierCurveTo(-1.4,.85,-.79,.91,0,.91);return s;}
+function body(scale,depth,z,bevel,mat){const g=new THREE.ExtrudeGeometry(contour(),{depth,bevelEnabled:true,bevelSegments:10,bevelSize:bevel,bevelThickness:bevel,curveSegments:40});g.translate(0,0,-depth/2);const m=new THREE.Mesh(g,mat);m.scale.set(scale,scale,1);m.position.z=z;group.add(m);return m;}
+body(1,.37,.05,.115,shell);
+body(.974,.012,.36,.025,seam);
+body(.963,.02,.388,.027,shell);
+// A softly domed face, with the three small windows positioned in its lower half.
+const face=body(.956,.012,.427,.021,shell);const fp=face.geometry.attributes.position;for(let i=0;i<fp.count;i++){const x=fp.getX(i),y=fp.getY(i);fp.setZ(i,fp.getZ(i)+.055*(1-x*x/3.5)*(1-y*y));}fp.needsUpdate=true;face.geometry.computeVertexNormals();
+for(const x of [-.73,0,.73]){
+ const z=.497-.015*Math.abs(x);
+ rounded(.327,.651,.16,.022,shell,x,-.34,z);
+ const windowMesh=rounded(.283,.599,.141,.014,black,x,-.34,z+.023);
+ for(const y of (x===0?[]:[-.205,-.475])){
+ const r=new THREE.Mesh(new THREE.TorusGeometry(.067,.013,10,40),glass);r.position.set(x,y,z+.05);group.add(r);
+ const eye=new THREE.Mesh(new THREE.SphereGeometry(.052,32,20),glass);eye.scale.z=.16;eye.position.set(x,y,z+.052);group.add(eye);
+ }
+ const sheen=rounded(.265,.30,.12,.002,new THREE.MeshPhysicalMaterial({color:0x46416a,transparent:true,opacity:.25,roughness:.22}),x,-.477,z+.044);
+}
+// Subtle raised Meta infinity mark, above the sensor windows.
+const logoPoints=[];for(let i=0;i<=100;i++){const t=i/100*Math.PI*2;logoPoints.push(new THREE.Vector3(.105*Math.cos(t),.065*Math.sin(2*t)+.64,.482));}group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(logoPoints),100,.011,8,false),new THREE.MeshStandardMaterial({color:0xc8cad5,roughness:.6})));
+// Open facial interface with an actual central nose recess.
+const eyePath=new THREE.Shape();eyePath.moveTo(0,.82);eyePath.bezierCurveTo(1.4,.83,1.78,.58,1.77,-.1);eyePath.bezierCurveTo(1.8,-.78,1.15,-.97,.53,-.82);eyePath.bezierCurveTo(.28,-.77,.23,-.40,0,-.4);eyePath.bezierCurveTo(-.23,-.4,-.28,-.77,-.53,-.82);eyePath.bezierCurveTo(-1.15,-.97,-1.8,-.78,-1.77,-.1);eyePath.bezierCurveTo(-1.78,.58,-1.4,.83,0,.82);
+for(const x of [-.83,.83]){const hole=new THREE.Path();hole.absellipse(x,.04,.59,.58,0,Math.PI*2,true);eyePath.holes.push(hole);}
+const eg=new THREE.ExtrudeGeometry(eyePath,{depth:.27,bevelEnabled:true,bevelSegments:6,bevelSize:.065,bevelThickness:.065,curveSegments:36});eg.translate(0,0,-.52);group.add(new THREE.Mesh(eg,cushion));
+for(const x of [-.83,.83]){const rim=new THREE.Mesh(new THREE.TorusGeometry(.50,.05,20,80),black);rim.scale.set(1.09,1,1);rim.position.set(x,.035,-.485);group.add(rim);const lens=new THREE.Mesh(new THREE.SphereGeometry(.47,48,32),glass);lens.scale.set(1.1,1,.13);lens.position.set(x,.035,-.48);group.add(lens);}
+for(const sign of [-1,1]){
+ const arm=rounded(.15,.42,.075,1.04,shell,sign*1.85,.07,-.24);arm.rotation.y=sign*-.06;
+ const sensor=rounded(.10,.20,.05,.018,black,sign*1.72,-.40,.20);sensor.rotation.y=sign*.8;
+}
+const port=rounded(.18,.075,.035,.013,black,1.961,.03,-.42);port.rotation.y=Math.PI/2;
+const power=rounded(.20,.075,.035,.016,seam,1.78,.17,.11);power.rotation.y=Math.PI/2;
+const vol=rounded(.40,.06,.027,.012,seam,-.96,-.91,.04);vol.rotation.x=Math.PI/2;
+for(const x of [-.68,-.60,-.52]){const mic=new THREE.Mesh(new THREE.SphereGeometry(.015,16,12),black);mic.position.set(x,-.9,.19);group.add(mic);}
+function ribbon(points,width,orientation){const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));const positions=[],uvs=[],indices=[];const n=100;for(let i=0;i<=n;i++){const p=curve.getPoint(i/n),t=curve.getTangent(i/n);let across=orientation==='vertical'?new THREE.Vector3(0,1,0):new THREE.Vector3(1,0,0);across.addScaledVector(t,-across.dot(t)).normalize().multiplyScalar(width/2);for(const sign of [-1,1]){positions.push(p.x+sign*across.x,p.y+sign*across.y,p.z+sign*across.z);uvs.push(i/n*3,(sign+1)/2);}if(i<n){const a=i*2;indices.push(a,a+1,a+2,a+1,a+3,a+2);}}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));g.setIndex(indices);g.computeVertexNormals();group.add(new THREE.Mesh(g,strap));for(const sign of [-1,1]){const edge=[];for(let i=0;i<=n;i++){const j=6*i+(sign===-1?0:3);edge.push(new THREE.Vector3(positions[j],positions[j+1],positions[j+2]));}group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(edge),100,.009,6,false),strap));}}
+// Soft split rear head strap; no rigid halo or rear battery pack.
+for(const sign of [-1,1]){
+ ribbon([[sign*1.85,.08,-.72],[sign*1.87,.12,-1.35],[sign*1.5,.15,-2.25],[sign*.7,.21,-2.80],[0,.25,-2.91]],.40,'vertical');
+ ribbon([[sign*1.78,.10,-1.65],[sign*1.4,.50,-2.4],[sign*.6,.60,-2.83],[0,.6,-2.90]],.25,'vertical');
+ const adjust=rounded(.38,.47,.08,.035,strap,sign*.72,.22,-2.82);adjust.rotation.y=sign*.24;
+}
+ribbon([[0,.88,-.07],[0,1.30,-.48],[0,1.50,-1.28],[0,1.13,-2.35],[0,.55,-2.90]],.52,'horizontal');
+
+const jack=new THREE.Mesh(new THREE.TorusGeometry(.055,.017,12,32),black);jack.position.set(-1.96,.04,-.42);jack.rotation.y=Math.PI/2;group.add(jack);
+const wheel=new THREE.Mesh(new THREE.CylinderGeometry(.16,.16,.08,32),seam);wheel.position.set(.95,-.91,.04);group.add(wheel);
+for(let i=0;i<18;i++){const a=i*Math.PI/9;const tooth=rounded(.02,.08,.008,.025,black,.95+Math.cos(a)*.16,-.915,.04+Math.sin(a)*.16);}
+for(const x of [-1.47,1.47])rounded(.12,.18,.045,.025,seam,x,.22,-.63);
+for(const x of [-1.92,1.92]){const speaker=rounded(.025,.08,.012,.25,black,x,-.12,-.67);}
+for(const child of group.children)child.position.z+=1.03;
+
+
+ const overlay=hx.querySelector('.hx-overlay'),lines=hx.querySelector('.hx-lines');
+ const views={front:[0,.08],left:[-1.45,.05],right:[1.45,.05],bottom:[0,-1.25],inside:[Math.PI,0],strap:[-.45,.85]};
+ let yaw=0,pitch=.08,scale=1;
+ const markers=parts.map((p,i)=>{
+  const b=document.createElement('button');b.type='button';b.className='hx-hotspot';b.dataset.hxPart=p.id;b.setAttribute('aria-label',p.name);b.setAttribute('aria-pressed',String(p.id===selected));b.innerHTML='<span>'+(i+1)+'</span>';b.addEventListener('click',()=>selectPart(p.id,false));overlay.append(b);
+  const line=document.createElementNS('http://www.w3.org/2000/svg','line');lines.append(line);
+  return {p,b,line,point:new THREE.Vector3(p.pos[0],p.pos[1],p.pos[2]+1.03),normal:new THREE.Vector3(...p.normal)};
+ });
+ function draw(){
+  const inside=Math.cos(yaw)<-.65;for(const child of group.children){if(child.material===strap)child.visible=!inside;}hx.querySelector('#hx-hint').textContent=inside?'Inside view · Strap hidden to show the controls':'Drag sideways to rotate · Select a point to learn';group.rotation.set(pitch,yaw,0);group.scale.setScalar(scale);group.updateMatrixWorld(true);camera.updateMatrixWorld(true);renderer.render(scene,camera);
+  for(const {p,b,line,point,normal} of markers){
+   const world=group.localToWorld(point.clone()),facing=normal.clone().transformDirection(group.matrixWorld).dot(camera.position.clone().sub(world).normalize());
+   const v=world.project(camera),w=stage.clientWidth,h=stage.clientHeight;
+   const px=(v.x*.5+.5)*w,py=(-v.y*.5+.5)*h;
+   const x=Math.max(24,Math.min(w-24,px+(p.offset?.[0]||0))),y=Math.max(24,Math.min(h-24,py+(p.offset?.[1]||0)));
+   const visible=facing>.32&&v.z<1&&px>0&&px<w&&py>0&&py<h;
+   b.hidden=!visible;line.style.display=visible?'':'none';b.style.left=x+'px';b.style.top=y+'px';
+   line.setAttribute('x1',px);line.setAttribute('y1',py);line.setAttribute('x2',x);line.setAttribute('y2',y);
+  }
+ }
+ function resize(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.position.z=camera.aspect<1?12:9.8;camera.updateProjectionMatrix();draw();}
+ selectView=(v)=>{[yaw,pitch]=views[v];hx.querySelectorAll('[data-hx-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hxView===v)));draw();};
+ hx.querySelectorAll('[data-hx-view]').forEach(b=>b.addEventListener('click',()=>selectView(b.dataset.hxView)));
+ hx.querySelectorAll('[data-hx-zoom]').forEach(b=>b.addEventListener('click',()=>{scale=Math.max(.75,Math.min(1.25,scale+Number(b.dataset.hxZoom)*.1));draw();}));
+ hx.querySelector('#hx-reset').addEventListener('click',()=>{scale=1;selectPart('cameras');});
+ let pointer=null;
+ stage.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;pointer={id:e.pointerId,x:e.clientX};stage.setPointerCapture(e.pointerId);});
+ stage.addEventListener('pointermove',e=>{if(pointer?.id!==e.pointerId)return;yaw+=(e.clientX-pointer.x)*.008;pointer.x=e.clientX;hx.querySelectorAll('[data-hx-view]').forEach(b=>b.setAttribute('aria-pressed','false'));draw();});
+ for(const event of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(event,()=>pointer=null);
+ stage.addEventListener('keydown',e=>{if(e.target!==stage)return;const delta={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.15],ArrowDown:[0,-.15]}[e.key];if(!delta)return;e.preventDefault();yaw+=delta[0];pitch=Math.max(-1.4,Math.min(1.4,pitch+delta[1]));hx.querySelectorAll('[data-hx-view]').forEach(b=>b.setAttribute('aria-pressed','false'));draw();});
+ new ResizeObserver(resize).observe(stage);resize();fallback.hidden=true;
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();fallback.textContent='The 3D view is unavailable. Use the part buttons below to continue learning.';fallback.hidden=false;overlay.hidden=true;hx.querySelectorAll('[data-hx-view],[data-hx-zoom],#hx-reset').forEach(b=>b.disabled=true);});
+}catch(error){fallback.textContent='The 3D view could not load. You can still select every part below to read its name and function.';hx.querySelectorAll('[data-hx-view],[data-hx-zoom],#hx-reset').forEach(b=>b.disabled=true);}
 
 </script>
 </body>
