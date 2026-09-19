@@ -1,772 +1,91 @@
-/* =========================================================
-   VR Learning Website
-   Five-page responsive CSS template
-   Pages:
-   1. Introduction to the Headset
-   2. HMD vs. Desktop VR vs. 360° Video
-   3. Controller Functionalities
-   4. Checking Internet Connection
-   5. Accessing the Browser
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   1. Design Tokens
-   --------------------------------------------------------- */
-
-:root {
-  --color-black: #000000;
-  --color-dark: #0a0a0c;
-  --color-dark-soft: #151518;
-  --color-gray-900: #1d1d1f;
-  --color-gray-700: #6e6e73;
-  --color-gray-500: #86868b;
-  --color-gray-300: #d2d2d7;
-  --color-gray-100: #f5f5f7;
-  --color-white: #ffffff;
-
-  --color-blue: #2997ff;
-  --color-blue-dark: #1477d4;
-  --color-green: #30d158;
-  --color-orange: #ff9f0a;
-  --color-red: #ff453a;
-
-  --page-width: 1240px;
-  --text-width: 760px;
-  --nav-height: 68px;
-
-  --radius-small: 12px;
-  --radius-medium: 22px;
-  --radius-large: 36px;
-  --radius-pill: 999px;
-
-  --shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.18);
-  --shadow-large: 0 24px 80px rgba(0, 0, 0, 0.35);
-
-  --transition-fast: 180ms ease;
-  --transition-medium: 300ms ease;
-}
-
-
-/* ---------------------------------------------------------
-   2. Reset and Base Styles
-   --------------------------------------------------------- */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-width: 320px;
-  margin: 0;
-  background: var(--color-black);
-  color: var(--color-white);
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    "SF Pro Text",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-img,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-a {
-  font: inherit;
-}
-
-button {
-  border: 0;
-}
-
-a {
-  color: inherit;
-}
-
-::selection {
-  background: var(--color-blue);
-  color: var(--color-white);
-}
-
-
-/* ---------------------------------------------------------
-   3. Shared Layout
-   --------------------------------------------------------- */
-
-.container {
-  width: min(100% - 40px, var(--page-width));
-  margin-inline: auto;
-}
-
-.text-container {
-  width: min(100%, var(--text-width));
-  margin-inline: auto;
-}
-
-.page {
-  min-height: 100vh;
-  overflow: hidden;
-  background: var(--color-black);
-}
-
-.page-section {
-  padding: 120px 0;
-}
-
-.page-section--small {
-  padding: 72px 0;
-}
-
-.page-section--light {
-  background: var(--color-gray-100);
-  color: var(--color-black);
-}
-
-.page-section--dark-gray {
-  background: var(--color-dark-soft);
-}
-
-.page-section--gradient {
-  background:
-    radial-gradient(
-      circle at 50% 15%,
-      rgba(74, 74, 86, 0.55),
-      transparent 36%
-    ),
-    var(--color-black);
-}
-
-.center-content {
-  display: grid;
-  place-items: center;
-  text-align: center;
-}
-
-.stack {
-  display: flex;
-  flex-direction: column;
-}
-
-.stack--small {
-  gap: 16px;
-}
-
-.stack--medium {
-  gap: 28px;
-}
-
-.stack--large {
-  gap: 48px;
-}
-
-
-/* ---------------------------------------------------------
-   4. Navigation
-   --------------------------------------------------------- */
-
-.site-header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  height: var(--nav-height);
-  background: rgba(0, 0, 0, 0.78);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  gap: 24px;
-}
-
-.navbar__brand {
-  color: var(--color-white);
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.navbar__links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-left: auto;
-}
-
-.navbar__link {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 13px;
-  text-decoration: none;
-  transition:
-    color var(--transition-fast),
-    opacity var(--transition-fast);
-}
-
-.navbar__link:hover,
-.navbar__link:focus-visible,
-.navbar__link[aria-current="page"] {
-  color: var(--color-white);
-}
-
-.navbar__menu-button {
-  display: none;
-  padding: 8px;
-  background: transparent;
-  color: var(--color-white);
-  cursor: pointer;
-}
-
-.navbar__menu-icon {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px 0;
-  background: var(--color-white);
-}
-
-
-/* ---------------------------------------------------------
-   5. Typography
-   --------------------------------------------------------- */
-
-.eyebrow {
-  margin: 0;
-  color: var(--color-gray-500);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.display-title {
-  max-width: 1000px;
-  margin: 0;
-  font-size: clamp(52px, 9vw, 128px);
-  font-weight: 600;
-  letter-spacing: -0.075em;
-  line-height: 0.94;
-}
-
-.page-title {
-  margin: 0;
-  font-size: clamp(42px, 7vw, 88px);
-  font-weight: 600;
-  letter-spacing: -0.065em;
-  line-height: 0.98;
-}
-
-.section-title {
-  margin: 0;
-  font-size: clamp(32px, 5vw, 64px);
-  font-weight: 600;
-  letter-spacing: -0.055em;
-  line-height: 1;
-}
-
-.card-title {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-.body-large {
-  margin: 0;
-  color: var(--color-gray-300);
-  font-size: clamp(19px, 2.4vw, 28px);
-  letter-spacing: -0.025em;
-  line-height: 1.3;
-}
-
-.body {
-  margin: 0;
-  color: var(--color-gray-300);
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.body-muted {
-  margin: 0;
-  color: var(--color-gray-500);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.page-section--light .body,
-.page-section--light .body-large {
-  color: var(--color-gray-700);
-}
-
-.page-section--light .body-muted {
-  color: var(--color-gray-500);
-}
-
-
-/* ---------------------------------------------------------
-   6. Buttons and Links
-   --------------------------------------------------------- */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 11px 22px;
-  border-radius: var(--radius-pill);
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    background var(--transition-fast),
-    color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button--primary {
-  background: var(--color-white);
-  color: var(--color-black);
-}
-
-.button--primary:hover {
-  background: var(--color-gray-300);
-}
-
-.button--blue {
-  background: var(--color-blue);
-  color: var(--color-white);
-}
-
-.button--blue:hover {
-  background: var(--color-blue-dark);
-}
-
-.button--outline {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: transparent;
-  color: var(--color-white);
-}
-
-.button--outline:hover {
-  border-color: var(--color-white);
-  background: var(--color-white);
-  color: var(--color-black);
-}
-
-.text-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--color-blue);
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.text-link::after {
-  content: "→";
-  transition: transform var(--transition-fast);
-}
-
-.text-link:hover::after {
-  transform: translateX(4px);
-}
-
-
-/* ---------------------------------------------------------
-   7. Hero Sections
-   --------------------------------------------------------- */
-
-.hero {
-  position: relative;
-  display: grid;
-  min-height: calc(100vh - var(--nav-height));
-  place-items: center;
-  padding: 120px 0;
-  text-align: center;
-}
-
-.hero__content {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 1050px);
-  margin-inline: auto;
-}
-
-.hero__title {
-  margin: 22px auto 0;
-}
-
-.hero__description {
-  max-width: 680px;
-  margin: 36px auto 0;
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 42px;
-}
-
-.hero--headset {
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(66, 66, 78, 0.7) 0%,
-      rgba(17, 17, 21, 0.7) 30%,
-      rgba(0, 0, 0, 1) 70%
-    );
-}
-
-.hero--comparison {
-  background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(51, 51, 62, 0.6),
-      transparent 45%
-    ),
-    var(--color-black);
-}
-
-.hero--controller {
-  background:
-    radial-gradient(
-      circle at 50% 45%,
-      rgba(46, 52, 66, 0.65),
-      transparent 48%
-    ),
-    var(--color-black);
-}
-
-.hero--internet {
-  background:
-    radial-gradient(
-      circle at 50% 30%,
-      rgba(30, 60, 78, 0.58),
-      transparent 44%
-    ),
-    var(--color-black);
-}
-
-.hero--browser {
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      rgba(61, 47, 71, 0.55),
-      transparent 46%
-    ),
-    var(--color-black);
-}
-
-
-/* ---------------------------------------------------------
-   8. Visual Placeholder and Product Display
-   --------------------------------------------------------- */
-
-.visual-stage {
-  position: relative;
-  display: grid;
-  min-height: 360px;
-  margin: 64px auto 0;
-  place-items: center;
-  border-radius: var(--radius-large);
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255, 255, 255, 0.14),
-      transparent 52%
-    );
-}
-
-.visual-placeholder {
-  display: grid;
-  width: min(80%, 520px);
-  aspect-ratio: 16 / 10;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 48% 48% 40% 40%;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.04)
-    );
-  box-shadow:
-    0 20px 80px rgba(255, 255, 255, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
-}
-
-.visual-placeholder__label {
-  color: var(--color-gray-300);
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.image-placeholder {
-  display: grid;
-  min-height: 260px;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-medium);
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.12),
-      rgba(255, 255, 255, 0.03)
-    );
-  color: var(--color-gray-500);
-  text-align: center;
-}
-
-
-/* ---------------------------------------------------------
-   9. Content Cards
-   --------------------------------------------------------- */
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 56px;
-}
-
-.card-grid--two {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.card {
-  min-height: 100%;
-  padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: var(--radius-medium);
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: var(--shadow-soft);
-}
-
-.card--light {
-  border-color: rgba(0, 0, 0, 0.1);
-  background: var(--color-white);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
-}
-
-.card__icon {
-  display: grid;
-  width: 54px;
-  height: 54px;
-  margin-bottom: 26px;
-  place-items: center;
-  border-radius: 18px;
-  background: var(--color-white);
-  color: var(--color-black);
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.card__icon--blue {
-  background: var(--color-blue);
-  color: var(--color-white);
-}
-
-.card__icon--green {
-  background: var(--color-green);
-  color: var(--color-black);
-}
-
-.card__icon--orange {
-  background: var(--color-orange);
-  color: var(--color-black);
-}
-
-.card__content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-
-/* ---------------------------------------------------------
-   10. Page 2 — Technology Comparison
-   --------------------------------------------------------- */
-
-.comparison-table {
-  width: 100%;
-  margin-top: 56px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-medium);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.comparison-row {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr 1fr;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.comparison-row:last-child {
-  border-bottom: 0;
-}
-
-.comparison-cell {
-  min-height: 88px;
-  padding: 22px;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--color-gray-300);
-  font-size: 15px;
-}
-
-.comparison-cell:last-child {
-  border-right: 0;
-}
-
-.comparison-cell--heading {
-  color: var(--color-white);
-  font-weight: 600;
-}
-
-.comparison-row--header .comparison-cell {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--color-white);
-  font-weight: 600;
-}
-
-
-/* ---------------------------------------------------------
-   11. Page 3 — Controller Functionality
-   --------------------------------------------------------- */
-
-.controller-layout {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  gap: 72px;
-  margin-top: 70px;
-}
-
-.controller-illustration {
-  display: grid;
-  min-height: 420px;
-  place-items: center;
-  border-radius: var(--radius-large);
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.15),
-      transparent 58%
-    );
-}
-
-.controller-illustration__device {
-  display: grid;
-  width: 230px;
-  height: 230px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  background: linear-gradient(145deg, #27272b, #08080a);
-  box-shadow: var(--shadow-large);
-  transform: rotate(-18deg);
-}
-
-.controller-illustration__device::after {
-  content: "Controller";
-  color: var(--color-gray-500);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transform: rotate(18deg);
-}
-
-.function-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.function-item {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 18px;
-  align-items: start;
-  padding: 21px;
-  border-radius: var(--radius-small);
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.function-item__number {
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--color-white);
-  color: var(--color-black);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-
-/* ---------------------------------------------------------
-   12. Page 4 — Internet Connection Check
-   --------------------------------------------------------- */
-
-.connection-checker {
-  max-width: 700px;
-  margin: 56px auto 0;
-  padding: 36px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius-large);
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: var(--shadow-soft);
-}
-
-.connection-status {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px;
-  border-radius: var(--radius-small);
-  background: rgba(48, 209, 88, 0.12);
-  color: var(--color-green);
-}
-
-.connection-status--warning {
-  background: rgba(255, 159, 10, 0.12);
-  color: var(--color-orange);
-}
-
-.connection-status
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple guide for elementary teachers who are learning to use Meta Quest 3.">
+  <title>Meta Quest 3 for Teachers | Introduction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Meta Quest 3 Teacher Guide</a>
+      <nav class="site-nav" aria-label="Course pages">
+        <a href="index.html" aria-current="page">1. Introduction</a>
+        <a href="vr-types.html">2. VR types</a>
+        <a href="controller.html">3. Controller</a>
+        <a href="internet.html">4. Internet</a>
+        <a href="browser.html">5. Browser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Page 1 of 5</p>
+        <h1>Meet Meta Quest 3.</h1>
+        <p class="hero-copy">Meta Quest 3 is a headset that places digital lessons and activities around you. Teachers can use it to support exploration, practice, and discussion.</p>
+        <p class="hero-note">Start with a clear learning goal.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">The main parts</p>
+          <h2>One headset. Two controllers. A safe space.</h2>
+          <p>These parts work together. The headset shows the experience. The controllers help you select and move items.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="number">1</span>
+            <h3>Headset</h3>
+            <p>The headset sits over your eyes. It tracks where you look and how you move your head.</p>
+          </article>
+          <article class="card">
+            <span class="number">2</span>
+            <h3>Controllers</h3>
+            <p>You hold one controller in each hand. They help you point, select, move, and hold digital items.</p>
+          </article>
+          <article class="card">
+            <span class="number">3</span>
+            <h3>Play area</h3>
+            <p>The headset asks you to set a safe area. Clear the floor before anyone starts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container">
+        <div class="feature-panel">
+          <p class="eyebrow">Classroom uses</p>
+          <h2>Use the headset when it adds value.</h2>
+          <ul class="plain-list">
+            <li><strong>Virtual field trips</strong>Students can visit places that are far away or difficult to enter.</li>
+            <li><strong>Science observation</strong>Students can study space, animals, weather, and the human body.</li>
+            <li><strong>Practice and creation</strong>Students can build, draw, speak, solve problems, and explain what they notice.</li>
+            <li><strong>Shared reflection</strong>Students can describe the experience to classmates and connect it to the lesson.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <strong>Teacher reminder</strong>
+          Check the app, space, time limit, and student needs before the lesson. Clean the headset between users.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav" aria-label="Page navigation">
+    <div class="page-nav-inner">
+      <span></span>
+      <a class="page-link" href="vr-types.html">Next: Compare VR types</a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">Meta Quest 3 Teacher Guide</footer>
+</body>
+</html>
