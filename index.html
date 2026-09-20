@@ -31,7 +31,22 @@
 @media(max-width:800px){.hx-stage{height:410px}.hx-sketchfab iframe{height:440px}.hx-mode button{padding:9px 12px}.hx-topbar{gap:12px}.hx-detail{min-height:260px}}
 @media(max-width:420px){.hx-stage{height:340px}.hx-sketchfab iframe{height:360px}.hx-list button{min-height:55px}.hx-views{padding:12px;gap:5px}.hx-views button{font-size:11px}.hx-detail h3{font-size:25px}}
 
-</style>
+
+/* Compact branding for the opening feature. */
+.quest-hero-title .meta-logo{width:64px;height:40px;margin-bottom:10px}
+.quest-hero-title h1{font-size:clamp(28px,3.5vw,56px)}
+@media(max-width:850px){.quest-hero-title .meta-logo{width:48px;height:30px}.quest-hero-title h1{font-size:clamp(28px,6vw,40px)}}
+
+/* Classroom film replaces the opening 3D illustration. */
+.quest-video-hero{height:auto;min-height:0;max-height:none;aspect-ratio:16/9;background:#142029;isolation:isolate}
+.quest-video-hero video{display:block;width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
+.quest-video-shade{position:absolute;inset:55% 0 42px;background:linear-gradient(transparent,rgba(0,0,0,.6));pointer-events:none;z-index:1}
+.quest-video-hero .quest-hero-title{left:5%;bottom:70px;color:#fff;max-width:85%;z-index:2}
+.quest-video-hero .meta-logo{width:48px;height:30px;margin-bottom:7px;color:#fff}
+.quest-video-hero .quest-hero-title h1{font-size:clamp(24px,3.2vw,46px);letter-spacing:-.04em;text-shadow:0 1px 8px #0005}
+.film-description{font-size:12px;color:#68717d;padding:10px 5%;margin:0;background:#f7f8fa;line-height:1.5}
+@media(max-width:600px){.quest-video-hero .quest-hero-title{bottom:45px;left:5%}.quest-video-hero .meta-logo{width:30px;height:20px;margin-bottom:2px}.quest-video-hero .quest-hero-title h1{font-size:22px}.film-description{font-size:11px}}
+.film-toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:12px 5%;background:#f7f8fa}.film-toolbar .film-description{padding:0}.film-toolbar button{font:inherit;font-size:13px;padding:9px 18px;border:1px solid #d6dce5;border-radius:24px;background:white;color:#155ed5;cursor:pointer;min-height:42px}.film-toolbar button:focus-visible{outline:3px solid #1565d8;outline-offset:3px}#film-error{font-size:12px;color:#8b2525}</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -50,20 +65,15 @@
 
   <main id="main">
 
-<section class="quest-hero" id="quest-three" aria-labelledby="hero-heading">
-<div class="product"><div class="quest-stage" role="img" aria-label="Interactive 3D illustration of Meta Quest 3. Drag to rotate, or use the view and zoom controls."></div></div>
-<p class="model-fallback" hidden role="status">The 3D preview could not load. Please check your connection and reload the page.</p><div class="interaction-hint">Drag to explore · Scroll to zoom</div>
-<div class="quest-hero-title">
-<svg class="meta-logo" role="img" aria-label="Meta" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Meta</title><path fill="currentColor" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg>
-
-<h1 id="hero-heading">Meet Meta Quest 3</h1>
-</div>
-<div class="product-controls" aria-label="3D model controls">
-<button type="button" data-view="front">Front</button><button type="button" data-view="back">Lenses</button><button type="button" data-view="side">Side</button>
-<label>Rotate<input id="quest-angle" type="range" min="-180" max="180" value="-28" aria-label="Rotate headset"></label><label>Zoom<input id="quest-zoom" type="range" min="70" max="145" value="100" aria-label="Zoom headset"></label>
-</div>
-<div id="quest-status" class="sr-only" role="status">Interactive 3D product illustration, not an official Meta model.</div>
+<section class="quest-hero quest-video-hero" id="quest-three" aria-labelledby="hero-heading">
+<video id="classroom-film" controls playsinline preload="metadata" poster="assets/classroom/poster.jpg" aria-label="18-second animated classroom introduction to Meta Quest 3" aria-describedby="film-description">
+<source src="assets/classroom/quest3-classroom-18s.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="assets/classroom/quest3-classroom-18s.mp4">Download the classroom film</a>.
+</video>
+<div class="quest-video-shade" aria-hidden="true"></div>
+<div class="quest-hero-title"><svg class="meta-logo" role="img" aria-label="Meta" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Meta</title><path fill="currentColor" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg><h1 id="hero-heading">Meet Meta Quest 3</h1></div>
 </section>
+<div class="film-toolbar"><button type="button" id="film-toggle" aria-controls="classroom-film">Play film</button><p id="film-description" class="film-description">18-second animated classroom film · AI-generated scenes</p><span id="film-error" role="status"></span></div>
 <section class="intro" aria-labelledby="intro-heading"><div class="intro-inner">
 <h2 id="intro-heading">Introduction</h2>
 <div class="intro-copy">
@@ -108,84 +118,7 @@
   </nav>
 
   <footer class="site-footer">Meta Quest 3 Teacher Guide</footer>
-<script type="module">
 
-
-const root=document.getElementById('quest-three'),stage=root.querySelector('.quest-stage'),angle=root.querySelector('#quest-angle'),zoom=root.querySelector('#quest-zoom'),status=root.querySelector('#quest-status');
-try {
-const THREE=await import('https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js');
-const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;stage.appendChild(renderer.domElement);
-const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(34,1,.1,100);camera.position.set(0,0,9.5);
-scene.add(new THREE.HemisphereLight(0xffffff,0x777985,1.6));
-for(const [x,y,z,power] of [[-4,6,6,70],[5,2,1,40],[0,4,-5,65]]){const l=new THREE.PointLight(0xffffff,power);l.position.set(x,y,z);scene.add(l);}
-const group=new THREE.Group();scene.add(group);
-// Physical product materials retain the headset's white shell and dark optics.
-const shell=new THREE.MeshStandardMaterial({color:0xe9eaf0,roughness:.4,metalness:.02});
-const weaveCanvas=document.createElement('canvas');weaveCanvas.width=weaveCanvas.height=128;const wc=weaveCanvas.getContext('2d');wc.fillStyle='#b9b9be';wc.fillRect(0,0,128,128);for(let y=0;y<128;y+=4)for(let x=0;x<128;x+=4){wc.fillStyle=(x+y)%8===0?'#ededf0':'#d2d2d9';wc.fillRect(x,y,2,3);}const weave=new THREE.CanvasTexture(weaveCanvas);weave.wrapS=weave.wrapT=THREE.RepeatWrapping;weave.repeat.set(4,1);weave.anisotropy=8;
-const strap=new THREE.MeshStandardMaterial({color:0xf0f0f4,map:weave,bumpMap:weave,bumpScale:.012,roughness:.95,side:THREE.DoubleSide});
-const seam=new THREE.MeshStandardMaterial({color:0x696b78,roughness:.8});
-const cushion=new THREE.MeshStandardMaterial({color:0x303039,roughness:1});
-const black=new THREE.MeshStandardMaterial({color:0x080a12,roughness:.25,metalness:.12});
-const glass=new THREE.MeshPhysicalMaterial({color:0x15172b,metalness:.3,roughness:.16,clearcoat:1});
-function rounded(w,h,r,d,mat,x=0,y=0,z=0){r=Math.min(r,w/2,h/2);const s=new THREE.Shape();s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);const b=Math.min(.025,w*.06,h*.06);const geo=new THREE.ExtrudeGeometry(s,{depth:d,bevelEnabled:true,bevelSegments:4,steps:1,bevelSize:b,bevelThickness:b,curveSegments:24});geo.translate(0,0,-d/2);const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);group.add(m);return m;}
-function contour(){const s=new THREE.Shape();s.moveTo(0,.91);s.bezierCurveTo(.79,.91,1.4,.85,1.65,.5);s.bezierCurveTo(1.86,.23,1.85,-.22,1.65,-.5);s.bezierCurveTo(1.38,-.82,.78,-.84,0,-.84);s.bezierCurveTo(-.78,-.84,-1.38,-.82,-1.65,-.5);s.bezierCurveTo(-1.85,-.22,-1.86,.23,-1.65,.5);s.bezierCurveTo(-1.4,.85,-.79,.91,0,.91);return s;}
-function body(scale,depth,z,bevel,mat){const g=new THREE.ExtrudeGeometry(contour(),{depth,bevelEnabled:true,bevelSegments:10,bevelSize:bevel,bevelThickness:bevel,curveSegments:40});g.translate(0,0,-depth/2);const m=new THREE.Mesh(g,mat);m.scale.set(scale,scale,1);m.position.z=z;group.add(m);return m;}
-body(1,.37,.05,.115,shell);
-body(.974,.012,.36,.025,seam);
-body(.963,.02,.388,.027,shell);
-// A softly domed face, with the three small windows positioned in its lower half.
-const face=body(.956,.012,.427,.021,shell);const fp=face.geometry.attributes.position;for(let i=0;i<fp.count;i++){const x=fp.getX(i),y=fp.getY(i);fp.setZ(i,fp.getZ(i)+.055*(1-x*x/3.5)*(1-y*y));}fp.needsUpdate=true;face.geometry.computeVertexNormals();
-for(const x of [-.73,0,.73]){
- const z=.497-.015*Math.abs(x);
- rounded(.327,.651,.16,.022,shell,x,-.34,z);
- const windowMesh=rounded(.283,.599,.141,.014,black,x,-.34,z+.023);
- for(const y of (x===0?[]:[-.205,-.475])){
- const r=new THREE.Mesh(new THREE.TorusGeometry(.067,.013,10,40),glass);r.position.set(x,y,z+.05);group.add(r);
- const eye=new THREE.Mesh(new THREE.SphereGeometry(.052,32,20),glass);eye.scale.z=.16;eye.position.set(x,y,z+.052);group.add(eye);
- }
- const sheen=rounded(.265,.30,.12,.002,new THREE.MeshPhysicalMaterial({color:0x46416a,transparent:true,opacity:.25,roughness:.22}),x,-.477,z+.044);
-}
-// Subtle raised Meta infinity mark, above the sensor windows.
-const logoPoints=[];for(let i=0;i<=100;i++){const t=i/100*Math.PI*2;logoPoints.push(new THREE.Vector3(.105*Math.cos(t),.065*Math.sin(2*t)+.64,.482));}group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(logoPoints),100,.011,8,false),new THREE.MeshStandardMaterial({color:0xc8cad5,roughness:.6})));
-// Open facial interface with an actual central nose recess.
-const eyePath=new THREE.Shape();eyePath.moveTo(0,.82);eyePath.bezierCurveTo(1.4,.83,1.78,.58,1.77,-.1);eyePath.bezierCurveTo(1.8,-.78,1.15,-.97,.53,-.82);eyePath.bezierCurveTo(.28,-.77,.23,-.40,0,-.4);eyePath.bezierCurveTo(-.23,-.4,-.28,-.77,-.53,-.82);eyePath.bezierCurveTo(-1.15,-.97,-1.8,-.78,-1.77,-.1);eyePath.bezierCurveTo(-1.78,.58,-1.4,.83,0,.82);
-for(const x of [-.83,.83]){const hole=new THREE.Path();hole.absellipse(x,.04,.59,.58,0,Math.PI*2,true);eyePath.holes.push(hole);}
-const eg=new THREE.ExtrudeGeometry(eyePath,{depth:.27,bevelEnabled:true,bevelSegments:6,bevelSize:.065,bevelThickness:.065,curveSegments:36});eg.translate(0,0,-.52);group.add(new THREE.Mesh(eg,cushion));
-for(const x of [-.83,.83]){const rim=new THREE.Mesh(new THREE.TorusGeometry(.50,.05,20,80),black);rim.scale.set(1.09,1,1);rim.position.set(x,.035,-.485);group.add(rim);const lens=new THREE.Mesh(new THREE.SphereGeometry(.47,48,32),glass);lens.scale.set(1.1,1,.13);lens.position.set(x,.035,-.48);group.add(lens);}
-for(const sign of [-1,1]){
- const arm=rounded(.15,.42,.075,1.04,shell,sign*1.85,.07,-.24);arm.rotation.y=sign*-.06;
- const sensor=rounded(.10,.20,.05,.018,black,sign*1.72,-.40,.20);sensor.rotation.y=sign*.8;
-}
-const port=rounded(.18,.075,.035,.013,black,-1.941,.03,-.32);port.rotation.y=-Math.PI/2;
-const power=rounded(.20,.075,.035,.016,seam,1.939,.09,-.29);power.rotation.y=Math.PI/2;
-const vol=rounded(.40,.06,.027,.012,seam,-.96,-.91,.04);vol.rotation.x=Math.PI/2;
-for(const x of [-.68,-.60,-.52]){const mic=new THREE.Mesh(new THREE.SphereGeometry(.015,16,12),black);mic.position.set(x,-.9,.19);group.add(mic);}
-function ribbon(points,width,orientation){const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));const positions=[],uvs=[],indices=[];const n=100;for(let i=0;i<=n;i++){const p=curve.getPoint(i/n),t=curve.getTangent(i/n);let across=orientation==='vertical'?new THREE.Vector3(0,1,0):new THREE.Vector3(1,0,0);across.addScaledVector(t,-across.dot(t)).normalize().multiplyScalar(width/2);for(const sign of [-1,1]){positions.push(p.x+sign*across.x,p.y+sign*across.y,p.z+sign*across.z);uvs.push(i/n*3,(sign+1)/2);}if(i<n){const a=i*2;indices.push(a,a+1,a+2,a+1,a+3,a+2);}}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));g.setIndex(indices);g.computeVertexNormals();group.add(new THREE.Mesh(g,strap));for(const sign of [-1,1]){const edge=[];for(let i=0;i<=n;i++){const j=6*i+(sign===-1?0:3);edge.push(new THREE.Vector3(positions[j],positions[j+1],positions[j+2]));}group.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(edge),100,.009,6,false),strap));}}
-// Soft split rear head strap; no rigid halo or rear battery pack.
-for(const sign of [-1,1]){
- ribbon([[sign*1.85,.08,-.72],[sign*1.87,.12,-1.35],[sign*1.5,.15,-2.25],[sign*.7,.21,-2.80],[0,.25,-2.91]],.40,'vertical');
- ribbon([[sign*1.78,.10,-1.65],[sign*1.4,.50,-2.4],[sign*.6,.60,-2.83],[0,.6,-2.90]],.25,'vertical');
- const adjust=rounded(.38,.47,.08,.035,strap,sign*.72,.22,-2.82);adjust.rotation.y=sign*.24;
-}
-ribbon([[0,.88,-.07],[0,1.30,-.48],[0,1.50,-1.28],[0,1.13,-2.35],[0,.55,-2.90]],.52,'horizontal');
-for(const child of group.children)child.position.z+=1.03;
-let yaw=-.49,pitch=.27,scale=1;
-function draw(){group.rotation.set(pitch,yaw,0);group.scale.setScalar(scale);renderer.render(scene,camera);}
-function resize(){const w=stage.clientWidth,h=stage.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.position.z=camera.aspect<1.2?12:9.5;camera.updateProjectionMatrix();draw();}
-new ResizeObserver(resize).observe(stage);
-
-angle.addEventListener('input',()=>{yaw=Number(angle.value)*Math.PI/180;draw();});
-zoom.addEventListener('input',()=>{scale=Number(zoom.value)/100;draw();});
-root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{yaw={front:0,back:Math.PI,side:-Math.PI/2}[b.dataset.view];pitch=b.dataset.view==='back'?-.08:.13;angle.value=Math.round(yaw*180/Math.PI);draw();}));
-const pointers=new Map();let lastDistance=0;
-stage.addEventListener('pointerdown',e=>{stage.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});lastDistance=0;});
-stage.addEventListener('pointermove',e=>{const prev=pointers.get(e.pointerId);if(!prev)return;const dx=e.clientX-prev.x,dy=e.clientY-prev.y;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2){const [a,b]=[...pointers.values()],d=Math.hypot(a.x-b.x,a.y-b.y);if(lastDistance)scale=Math.max(.7,Math.min(1.45,scale*d/lastDistance));lastDistance=d;zoom.value=Math.round(scale*100);}else{yaw+=dx*.008;pitch=Math.max(-1.4,Math.min(1.4,pitch+dy*.008));yaw=Math.atan2(Math.sin(yaw),Math.cos(yaw));angle.value=Math.round(yaw*180/Math.PI);}draw();});
-for(const event of ['pointerup','pointercancel'])stage.addEventListener(event,e=>{pointers.delete(e.pointerId);lastDistance=0;});
-stage.addEventListener('wheel',e=>{e.preventDefault();scale=Math.max(.7,Math.min(1.45,scale-e.deltaY*.001));zoom.value=Math.round(scale*100);draw();},{passive:false});resize();
-}catch(e){status.textContent='The 3D preview could not load.';root.querySelector('.model-fallback').hidden=false;root.querySelectorAll('.product-controls button,.product-controls input').forEach(el=>el.disabled=true);}
-
-</script>
 
 <script>
 
@@ -247,6 +180,10 @@ new ResizeObserver(draw).observe(stage);select('cameras');
 })();
 
 </script>
-</body>
+<script>
+(()=>{const video=document.getElementById('classroom-film'),button=document.getElementById('film-toggle');
+button.addEventListener('click',()=>{if(video.paused){video.play().catch(()=>{document.getElementById('film-error').textContent='Playback could not start. Please try the video controls.';});}else video.pause();});
+video.addEventListener('play',()=>{button.textContent='Pause film';document.getElementById('film-error').textContent='';});video.addEventListener('pause',()=>button.textContent=video.ended?'Replay film':'Play film');video.addEventListener('ended',()=>button.textContent='Replay film');})();
+</script></body>
 </html>
 
