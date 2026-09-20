@@ -3,9 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A plain language comparison of a headset, desktop VR, and 360 video.">
+  <meta name="description" content="A detailed comparison of head-mounted displays, desktop VR, and 360-degree video.">
   <title>Meta Quest 3 for Teachers | Compare VR Types</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .vr-comparison-section{padding:86px 0 110px;background:#fff}
+    .vr-comparison-section .section-heading{max-width:1040px;margin-bottom:48px}
+    .vr-comparison-section .section-heading h1{font-size:clamp(42px,5.7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:0 0 24px}
+    .vr-comparison-section .section-heading p{max-width:900px}
+    .comparison-wrap{overflow-x:auto;border:1px solid #d8dee7;border-radius:26px;background:#fff;box-shadow:0 18px 44px rgba(28,39,58,.06)}
+    .detailed-comparison{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;text-align:left}
+    .detailed-comparison th,.detailed-comparison td{padding:22px 24px;border-right:1px solid #dfe4eb;border-bottom:1px solid #dfe4eb;vertical-align:top;font-size:17px;line-height:1.45}
+    .detailed-comparison th:last-child,.detailed-comparison td:last-child{border-right:0}
+    .detailed-comparison tr:last-child th,.detailed-comparison tr:last-child td{border-bottom:0}
+    .detailed-comparison thead th{background:#e8f2ff;color:#11151b;font-weight:750;vertical-align:bottom}
+    .detailed-comparison thead th:first-child{width:15%}
+    .detailed-comparison thead th:not(:first-child){width:28.333%}
+    .detailed-comparison tbody th{background:#f7f9fc;color:#131820;font-weight:750}
+    .detailed-comparison tbody td{color:#5f6672}
+    .detailed-comparison .media-row th{background:#f7f9fc;vertical-align:middle}
+    .detailed-comparison .media-row td{padding:14px;background:#f7f9fc}
+    .detailed-comparison .media-row img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;background:#eef2f7}
+    @media(max-width:720px){.vr-comparison-section{padding:58px 0 80px}.vr-comparison-section .section-heading{margin-bottom:32px}.comparison-wrap{border-radius:18px}.detailed-comparison th,.detailed-comparison td{padding:17px 18px;font-size:15px}}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -23,79 +43,87 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Three ways to view a digital world.</h1>
-        <p class="hero-copy">A headset, desktop VR, and 360 video can all show a virtual place. The way people view and use that place is different.</p>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="vr-comparison-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Simple comparison</p>
-          <h2>Choose the format that fits the lesson.</h2>
-          <p>Students do not always need a headset. The learning goal should guide the choice.</p>
+          <p class="eyebrow">VR FORMAT COMPARISON</p>
+          <h1>Difference Between HMD, Desktop VR, and 360° Video</h1>
+          <p>Compare how students view, control, and move through each type of virtual experience.</p>
         </div>
 
         <div class="comparison-wrap">
-          <table class="comparison">
+          <table class="detailed-comparison">
             <thead>
               <tr>
-                <th scope="col">Format</th>
-                <th scope="col">What students use</th>
-                <th scope="col">What students can do</th>
-                <th scope="col">Good classroom use</th>
+                <th scope="col">Comparison Category</th>
+                <th scope="col">HMD (Head-Mounted Display)</th>
+                <th scope="col">Desktop VR</th>
+                <th scope="col">360° Video</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Head-mounted display</td>
-                <td>A headset and controllers.</td>
-                <td>Look around, move, select items, and take part in an activity.</td>
-                <td>Practice, exploration, and lessons that need a strong sense of place.</td>
+              <tr class="media-row">
+                <th scope="row">Visual example</th>
+                <td><img src="assets/vr-types/head-mounted-display.gif" alt="A student using a head-mounted display and two hand controllers in a classroom."></td>
+                <td><img src="assets/vr-types/desktop-vr.gif" alt="A student exploring a three-dimensional environment on a desktop computer with a keyboard and mouse."></td>
+                <td><img src="assets/vr-types/360-video.gif" alt="Students viewing a panoramic 360-degree scene on a tablet."></td>
               </tr>
               <tr>
-                <td>Desktop VR</td>
-                <td>A computer screen, mouse, and keyboard.</td>
-                <td>Move through a digital place on the screen.</td>
-                <td>Whole-class display, computer lab work, and students who cannot use a headset.</td>
+                <th scope="row">Basic Definition</th>
+                <td>A wearable device that displays a virtual environment directly in front of the user’s eyes.</td>
+                <td>A virtual environment experienced through a computer screen.</td>
+                <td>A pre-recorded panoramic video that allows users to look around in different directions.</td>
               </tr>
               <tr>
-                <td>360 video</td>
-                <td>A headset, computer, tablet, or phone.</td>
-                <td>Look in every direction while the video plays.</td>
-                <td>Field trips, observation, and short introductions to a place or event.</td>
+                <th scope="row">Main Equipment</th>
+                <td>VR headset, controllers, and sometimes motion sensors.</td>
+                <td>Desktop or laptop computer, monitor, keyboard, mouse, or game controller.</td>
+                <td>Smartphone, tablet, computer, or VR headset.</td>
+              </tr>
+              <tr>
+                <th scope="row">Level of Immersion</th>
+                <td>High; the headset covers much of the user’s field of view.</td>
+                <td>Moderate; the user views the virtual environment on a flat screen.</td>
+                <td>Moderate; users can look around but usually cannot move freely.</td>
+              </tr>
+              <tr>
+                <th scope="row">Interaction</th>
+                <td>Users can interact with the virtual environment using controllers, hand gestures, or head movements.</td>
+                <td>Users primarily interact with a keyboard, mouse, or game controller.</td>
+                <td>Interaction is usually limited to changing the viewing direction.</td>
+              </tr>
+              <tr>
+                <th scope="row">Movement</th>
+                <td>Users may be able to walk, turn, or move around in the virtual environment.</td>
+                <td>Movement is usually controlled with a keyboard, mouse, or controller.</td>
+                <td>Users typically remain in the original filming position.</td>
+              </tr>
+              <tr>
+                <th scope="row">Viewpoint</th>
+                <td>Changes in real time according to the user’s head and body movements.</td>
+                <td>Controlled by the mouse, keyboard, or controller.</td>
+                <td>Users can look up, down, left, and right.</td>
+              </tr>
+              <tr>
+                <th scope="row">Degrees of Freedom</th>
+                <td>Often supports six degrees of freedom (6DoF).</td>
+                <td>Depends on the software; usually provides limited movement.</td>
+                <td>Usually supports three degrees of freedom (3DoF).</td>
+              </tr>
+              <tr>
+                <th scope="row">Typical Content</th>
+                <td>Interactive simulations, virtual laboratories, training programs, and VR games.</td>
+                <td>3D software, simulations, games, and virtual learning platforms.</td>
+                <td>Virtual tours, documentaries, campus tours, and recorded events.</td>
+              </tr>
+              <tr>
+                <th scope="row">Educational Uses</th>
+                <td>Hands-on practice, simulations, technical training, and immersive learning.</td>
+                <td>Software training, design activities, data analysis, and virtual demonstrations.</td>
+                <td>Observing real-world locations, virtual field trips, and environmental exploration.</td>
               </tr>
             </tbody>
           </table>
-        </div>
-
-        <div class="callout">
-          <strong>Key idea</strong>
-          A headset is a device. Desktop VR is an experience on a computer. A 360 video is a recorded view in every direction.
-        </div>
-      </div>
-    </section>
-
-    <section class="section soft">
-      <div class="container">
-        <div class="grid">
-          <article class="card">
-            <span class="number">1</span>
-            <h3>Use a headset</h3>
-            <p>Choose it when students need to act inside the experience.</p>
-          </article>
-          <article class="card">
-            <span class="number">2</span>
-            <h3>Use desktop VR</h3>
-            <p>Choose it when students need easy access on a school computer.</p>
-          </article>
-          <article class="card">
-            <span class="number">3</span>
-            <h3>Use 360 video</h3>
-            <p>Choose it when students need to observe a place from all sides.</p>
-          </article>
         </div>
       </div>
     </section>
