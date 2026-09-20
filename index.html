@@ -38,14 +38,14 @@
 @media(max-width:850px){.quest-hero-title .meta-logo{width:48px;height:30px}.quest-hero-title h1{font-size:clamp(28px,6vw,40px)}}
 
 /* Classroom film replaces the opening 3D illustration. */
-.quest-video-hero{height:auto;min-height:0;max-height:none;aspect-ratio:16/9;background:#142029;isolation:isolate}
+.quest-video-hero{height:min(56.25vw,calc(100svh - 150px));min-height:0;max-height:none;aspect-ratio:auto;background:#142029;isolation:isolate}
 .quest-video-hero video{display:block;width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
 .quest-video-shade{position:absolute;inset:55% 0 42px;background:linear-gradient(transparent,rgba(0,0,0,.6));pointer-events:none;z-index:1}
 .quest-video-hero .quest-hero-title{left:5%;bottom:70px;color:#fff;max-width:85%;z-index:2}
 .quest-video-hero .meta-logo{width:48px;height:30px;margin-bottom:7px;color:#fff}
 .quest-video-hero .quest-hero-title h1{font-size:clamp(24px,3.2vw,46px);letter-spacing:-.04em;text-shadow:0 1px 8px #0005}
 .film-description{font-size:12px;color:#68717d;padding:10px 5%;margin:0;background:#f7f8fa;line-height:1.5}
-@media(max-width:600px){.quest-video-hero .quest-hero-title{bottom:45px;left:5%}.quest-video-hero .meta-logo{width:30px;height:20px;margin-bottom:2px}.quest-video-hero .quest-hero-title h1{font-size:22px}.film-description{font-size:11px}}
+@media(max-width:600px){.quest-video-hero{height:56.25vw}.quest-video-hero .quest-hero-title{bottom:38px;left:5%}.quest-video-hero .meta-logo{width:30px;height:20px;margin-bottom:2px}.quest-video-hero .quest-hero-title h1{font-size:22px}.film-description{font-size:11px}}
 .film-toolbar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:12px 5%;background:#f7f8fa}.film-toolbar .film-description{padding:0}.film-toolbar button{font:inherit;font-size:13px;padding:9px 18px;border:1px solid #d6dce5;border-radius:24px;background:white;color:#155ed5;cursor:pointer;min-height:42px}.film-toolbar button:focus-visible{outline:3px solid #1565d8;outline-offset:3px}#film-error{font-size:12px;color:#8b2525}</style>
 </head>
 <body>
