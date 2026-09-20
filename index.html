@@ -38,11 +38,11 @@
 @media(max-width:850px){.quest-hero-title .meta-logo{width:48px;height:30px}.quest-hero-title h1{font-size:clamp(28px,6vw,40px)}}
 
 /* Classroom film replaces the opening 3D illustration. */
-.quest-video-hero{height:min(56.25vw,calc(100svh - 150px));min-height:0;max-height:none;aspect-ratio:auto;background:#142029;isolation:isolate}
+.quest-video-hero{height:min(56.25vw,calc(100svh - 150px));min-height:0;max-height:none;aspect-ratio:auto;background:#f7f8fa;isolation:isolate}
 .quest-video-hero video{display:block;width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
 .quest-video-shade{position:absolute;inset:55% 0 42px;background:linear-gradient(transparent,rgba(0,0,0,.6));pointer-events:none;z-index:1}
 .quest-video-hero .quest-hero-title{left:5%;bottom:70px;color:#fff;max-width:85%;z-index:2}
-.quest-video-hero .meta-logo{width:48px;height:30px;margin-bottom:7px;color:#fff}
+.quest-video-hero .meta-logo{width:48px;height:30px;margin-bottom:7px;color:#0866ff}
 .quest-video-hero .quest-hero-title h1{font-size:clamp(24px,3.2vw,46px);letter-spacing:-.04em;text-shadow:0 1px 8px #0005}
 .film-description{font-size:12px;color:#68717d;padding:10px 5%;margin:0;background:#f7f8fa;line-height:1.5}
 @media(max-width:600px){.quest-video-hero{height:56.25vw}.quest-video-hero .quest-hero-title{bottom:38px;left:5%}.quest-video-hero .meta-logo{width:30px;height:20px;margin-bottom:2px}.quest-video-hero .quest-hero-title h1{font-size:22px}.film-description{font-size:11px}}
@@ -66,15 +66,14 @@
   <main id="main">
 
 <section class="quest-hero quest-video-hero" id="quest-three" aria-labelledby="hero-heading">
-<video id="classroom-film" controls playsinline preload="metadata" poster="assets/classroom/poster.jpg" aria-label="18-second animated classroom introduction to Meta Quest 3" aria-describedby="film-description">
-<source src="assets/classroom/quest3-classroom-18s.webm" type="video/webm">
-<source src="assets/classroom/quest3-classroom-18s.mp4" type="video/mp4">
-Your browser does not support embedded video. <a href="assets/classroom/quest3-classroom-18s.mp4">Download the classroom film</a>.
+<video id="classroom-film" controls autoplay muted loop playsinline preload="auto" poster="assets/classroom/poster.jpg" aria-label="12-second looping classroom introduction to Meta Quest 3">
+<source src="assets/classroom/quest3-classroom-12s.webm" type="video/webm">
+<source src="assets/classroom/quest3-classroom-12s.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="assets/classroom/quest3-classroom-12s.mp4">Download the classroom film</a>.
 </video>
 <div class="quest-video-shade" aria-hidden="true"></div>
 <div class="quest-hero-title"><svg class="meta-logo" role="img" aria-label="Meta" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Meta</title><path fill="currentColor" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></svg><h1 id="hero-heading">Meet Meta Quest 3</h1></div>
 </section>
-<div class="film-toolbar"><button type="button" id="film-toggle" aria-controls="classroom-film">Play film</button><p id="film-description" class="film-description">18-second animated classroom film · AI-generated scenes</p><span id="film-error" role="status"></span></div>
 <section class="intro" aria-labelledby="intro-heading"><div class="intro-inner">
 <h2 id="intro-heading">Introduction</h2>
 <div class="intro-copy">
@@ -181,9 +180,5 @@ new ResizeObserver(draw).observe(stage);select('cameras');
 })();
 
 </script>
-<script>
-(()=>{const video=document.getElementById('classroom-film'),button=document.getElementById('film-toggle');
-button.addEventListener('click',()=>{if(video.paused){video.play().catch(()=>{document.getElementById('film-error').textContent='Playback could not start. Please try the video controls.';});}else video.pause();});
-video.addEventListener('play',()=>{button.textContent='Pause film';document.getElementById('film-error').textContent='';});video.addEventListener('pause',()=>button.textContent=video.ended?'Replay film':'Play film');video.addEventListener('ended',()=>button.textContent='Replay film');})();
-</script></body>
+</body>
 </html>
