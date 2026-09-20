@@ -8,22 +8,24 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .vr-comparison-section{padding:86px 0 110px;background:#fff}
-    .vr-comparison-section .section-heading{max-width:1040px;margin-bottom:48px}
-    .vr-comparison-section .section-heading h1{font-size:clamp(42px,5.7vw,78px);line-height:1.02;letter-spacing:-.055em;margin:0 0 24px}
-    .vr-comparison-section .section-heading p{max-width:900px}
+    .vr-comparison-section .section-heading{max-width:none;margin-bottom:42px}
+    .vr-comparison-section .section-heading h1{font-size:clamp(36px,4vw,54px);line-height:1.08;letter-spacing:-.045em;margin:0}
     .comparison-wrap{overflow-x:auto;border:1px solid #d8dee7;border-radius:26px;background:#fff;box-shadow:0 18px 44px rgba(28,39,58,.06)}
-    .detailed-comparison{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;text-align:left}
+    .detailed-comparison{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;text-align:center}
     .detailed-comparison th,.detailed-comparison td{padding:22px 24px;border-right:1px solid #dfe4eb;border-bottom:1px solid #dfe4eb;vertical-align:top;font-size:17px;line-height:1.45}
     .detailed-comparison th:last-child,.detailed-comparison td:last-child{border-right:0}
     .detailed-comparison tr:last-child th,.detailed-comparison tr:last-child td{border-bottom:0}
-    .detailed-comparison thead th{background:#e8f2ff;color:#11151b;font-weight:750;vertical-align:bottom}
+    .detailed-comparison thead th{background:#012169;color:#fff;font-weight:750;vertical-align:middle}
     .detailed-comparison thead th:first-child{width:15%}
     .detailed-comparison thead th:not(:first-child){width:28.333%}
-    .detailed-comparison tbody th{background:#f7f9fc;color:#131820;font-weight:750}
+    .detailed-comparison tbody th{color:#131820;font-weight:750}
     .detailed-comparison tbody td{color:#5f6672}
-    .detailed-comparison .media-row th{background:#f7f9fc;vertical-align:middle}
-    .detailed-comparison .media-row td{padding:14px;background:#f7f9fc}
+    .detailed-comparison tbody tr:nth-child(odd) th,.detailed-comparison tbody tr:nth-child(odd) td{background:#fff}
+    .detailed-comparison tbody tr:nth-child(even) th,.detailed-comparison tbody tr:nth-child(even) td{background:#eef6ff}
+    .detailed-comparison .media-row th{vertical-align:middle}
+    .detailed-comparison .media-row td{padding:14px}
     .detailed-comparison .media-row img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;background:#eef2f7}
+    @media(min-width:901px){.vr-comparison-section .section-heading h1{white-space:nowrap}}
     @media(max-width:720px){.vr-comparison-section{padding:58px 0 80px}.vr-comparison-section .section-heading{margin-bottom:32px}.comparison-wrap{border-radius:18px}.detailed-comparison th,.detailed-comparison td{padding:17px 18px;font-size:15px}}
   </style>
 </head>
@@ -46,9 +48,7 @@
     <section class="vr-comparison-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">VR FORMAT COMPARISON</p>
           <h1>Difference Between HMD, Desktop VR, and 360° Video</h1>
-          <p>Compare how students view, control, and move through each type of virtual experience.</p>
         </div>
 
         <div class="comparison-wrap">
