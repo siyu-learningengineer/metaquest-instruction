@@ -50,6 +50,16 @@
 .hx .hx-list button[aria-pressed=true]{background:#012169;border-color:#012169;color:#fff}
 .hx .hx-list button:focus-visible{outline:3px solid #012169;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.hx .hx-list button{transition:none}.hx .hx-list button:hover{transform:none}}
+
+/* Align the introduction with the navigation and headset explorer. */
+.intro{padding-left:18px;padding-right:18px}
+.intro-inner{width:min(100%,var(--content));max-width:var(--content);grid-template-columns:max-content minmax(0,1fr);align-items:start}
+.intro h2{font-size:clamp(28px,4.3vw,62px)}
+.intro h2 span{display:block;white-space:nowrap}
+.intro-product-name{color:#0866FF}
+.intro-section-name{color:#000}
+#headset-explorer{padding-left:18px;padding-right:18px}
+@media(max-width:850px){.intro-inner{grid-template-columns:minmax(0,1fr)}.intro h2{font-size:clamp(28px,7.5vw,54px)}}
 </style>
 </head>
 <body>
@@ -71,7 +81,7 @@
   <main id="main">
 
 <section class="intro" aria-labelledby="intro-heading"><div class="intro-inner">
-<h2 id="intro-heading">Meta Quest 3 Introduction</h2>
+<h2 id="intro-heading"><span class="intro-product-name">Meta Quest 3</span><span class="intro-section-name">Introduction</span></h2>
 <div class="intro-copy">
 <p>Meta Quest 3 is a virtual reality (VR) device that includes a headset and two controllers. The headset lets you look around a virtual environment, while the controllers help you select, move, and interact with objects. In supported apps, you can also use your own hands to interact without holding the controllers. By the end of the lesson, you will be able to set up the headset, navigate basic menus, and open a learning activity.</p>
 </div>
