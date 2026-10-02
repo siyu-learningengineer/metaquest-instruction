@@ -60,6 +60,17 @@
 .intro-section-name{color:#000}
 #headset-explorer{padding-left:18px;padding-right:18px}
 @media(max-width:850px){.intro-inner{grid-template-columns:minmax(0,1fr)}.intro h2{font-size:clamp(28px,7.5vw,54px)}}
+
+/* Names travel with the numbered image hotspots. */
+.hx .hx-hotspot{width:max-content;max-width:calc(100% - 16px);height:auto;min-height:40px;display:flex;align-items:center;gap:8px;padding:7px 12px 7px 7px;transform:none;border:1px solid #4B9CD3;border-radius:22px;background:#4B9CD3;color:#101114;text-align:left;box-shadow:0 3px 12px #01216926;transition:background-color .18s ease}
+.hx .hx-hotspot span{width:auto;height:auto;display:block;background:none;border:0;border-radius:0;box-shadow:none;color:inherit;font-size:12px}
+.hx .hx-hotspot .hx-hotspot-number{min-width:22px;text-align:center;font-weight:750}
+.hx .hx-hotspot .hx-hotspot-name{font-weight:600;line-height:1.35;max-width:210px}
+.hx .hx-hotspot[aria-pressed=true]{background:#012169!important;border-color:#012169;color:#fff}
+.hx .hx-hotspot[aria-pressed=true] span{background:none;box-shadow:none;color:inherit}
+.hx .hx-hotspot:hover{box-shadow:0 4px 16px #01216955}
+@media(max-width:420px){.hx .hx-hotspot .hx-hotspot-name{max-width:150px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.hx .hx-hotspot{transition:none}}
 </style>
 </head>
 <body>
@@ -91,10 +102,10 @@
 <section class="section hx" id="headset-explorer" aria-labelledby="hx-heading"><div class="container">
 <div class="section-heading"><p class="eyebrow">Explore your headset</p><h2 id="hx-heading">A closer look at Quest 3</h2><p>Explore the 3D model, or select a point in the photo guide to learn each control.</p></div>
 <div class="hx-shell"><div class="hx-topbar"><strong>Meta Quest 3</strong><div class="hx-mode" aria-label="Explore mode"><button type="button" data-mode="photo" aria-pressed="true">Photo guide</button><button type="button" data-mode="model" aria-pressed="false">3D model ↗</button></div></div>
-<div class="hx-layout"><div class="hx-model"><div class="hx-stage" tabindex="0" role="group" aria-label="Interactive product photographs. Left and right arrow keys switch views." aria-describedby="hx-hint"><img class="hx-photo" src="assets/quest3/power-usbc-v2.webp" alt="Meta Quest 3, left side" draggable="false"><div class="hx-overlay"><svg class="hx-lines" aria-hidden="true"></svg></div><p class="hx-image-error" hidden role="status">This image could not load. The English descriptions are still available below.</p></div><div class="hx-tools"><p id="hx-hint">Select a number on the image or a labeled button below</p><div><button type="button" data-hx-zoom="-1" aria-label="Zoom out">−</button><button type="button" data-hx-zoom="1" aria-label="Zoom in">+</button><button type="button" id="hx-reset">Reset view</button></div></div>
+<div class="hx-layout"><div class="hx-model"><div class="hx-stage" tabindex="0" role="group" aria-label="Interactive product photographs. Left and right arrow keys switch views." aria-describedby="hx-hint"><img class="hx-photo" src="assets/quest3/power-usbc-v2.webp" alt="Meta Quest 3, left side" draggable="false"><div class="hx-overlay"><svg class="hx-lines" aria-hidden="true"></svg></div><p class="hx-image-error" hidden role="status">This image could not load. The English descriptions are still available below.</p></div><div class="hx-tools"><p id="hx-hint">Select a labeled point · Use arrows to view other parts</p><div><button type="button" data-hx-zoom="-1" aria-label="Zoom out">−</button><button type="button" data-hx-zoom="1" aria-label="Zoom in">+</button><button type="button" id="hx-reset">Reset view</button><button type="button" data-hx-step="-1" aria-label="Previous product image">←</button><button type="button" data-hx-step="1" aria-label="Next product image">→</button></div></div>
 <div class="hx-sketchfab" hidden><iframe title="Meta Quest 3 by Elin — interactive 3D model" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe><p class="hx-embed-status" role="status">Drag to rotate and scroll to zoom. If the viewer stays blank, <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">open the 3D model on Sketchfab</a>.</p><button type="button" class="hx-return">Locate buttons in the photo guide</button></div>
 </div><aside id="hx-detail" class="hx-detail" aria-live="polite" aria-atomic="true"><span class="hx-tag">Charging port</span><h3>USB-C charging port (Type-C)</h3><p class="hx-location">Left side · on the strap arm</p><p class="hx-description">Connect the charging cable to this USB-C (Type-C) port to charge the headset.</p></aside></div></div>
-<div class="hx-list" aria-label="All headset buttons and parts"><button type="button" data-hx-part="usb" aria-controls="hx-detail" aria-pressed="false"><span>1</span>USB-C charging port (Type-C)</button><button type="button" data-hx-part="power" aria-controls="hx-detail" aria-pressed="false"><span>2</span>Power button</button><button type="button" data-hx-part="volume" aria-controls="hx-detail" aria-pressed="false"><span>3</span>Volume buttons (+ / −)</button><button type="button" data-hx-part="ipd" aria-controls="hx-detail" aria-pressed="false"><span>4</span>Lens adjustment wheel</button><button type="button" data-hx-part="eye-relief" aria-controls="hx-detail" aria-pressed="false"><span>5</span>Eye-relief buttons</button><button type="button" data-hx-part="strap" aria-controls="hx-detail" aria-pressed="false"><span>6</span>Head strap</button></div><p class="hx-note">Hotspots are placed on the supplied product images. Left and right refer to the person wearing the headset.</p><p class="hx-note">3D model: <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">“Meta Quest 3”</a> by <a href="https://sketchfab.com/ElinHohler" target="_blank" rel="noopener noreferrer">Elin</a>, via Sketchfab · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Original model, shown without geometry edits.</p><noscript><p>Enable JavaScript to select views and hotspots.</p><dl><dt>USB-C charging port (Type-C)</dt><dd>Connect the charging cable to this USB-C (Type-C) port to charge the headset.</dd><dt>Power button</dt><dd>Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.</dd><dt>Volume buttons (+ / −)</dt><dd>Press the + end to increase the volume. Press the − end to decrease it. Both controls are on the same long rocker on the underside of the headset.</dd><dt>Lens adjustment wheel</dt><dd>Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.</dd><dt>Eye-relief buttons</dt><dd>Take off the headset. Press and hold the eye-relief buttons on the left and right sides at the same time to adjust the facial interface so the headset sits evenly, with room for your glasses if needed.</dd><dt>Head strap</dt><dd>Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.</dd></dl></noscript></div></section>
+<p class="hx-note">Hotspots are placed on the supplied product images. Left and right refer to the person wearing the headset.</p><p class="hx-note">3D model: <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">“Meta Quest 3”</a> by <a href="https://sketchfab.com/ElinHohler" target="_blank" rel="noopener noreferrer">Elin</a>, via Sketchfab · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Original model, shown without geometry edits.</p><noscript><p>Enable JavaScript to select views and hotspots.</p><dl><dt>USB-C charging port (Type-C)</dt><dd>Connect the charging cable to this USB-C (Type-C) port to charge the headset.</dd><dt>Power button</dt><dd>Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.</dd><dt>Volume buttons (+ / −)</dt><dd>Press the + end to increase the volume. Press the − end to decrease it. Both controls are on the same long rocker on the underside of the headset.</dd><dt>Lens adjustment wheel</dt><dd>Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.</dd><dt>Eye-relief buttons</dt><dd>Take off the headset. Press and hold the eye-relief buttons on the left and right sides at the same time to adjust the facial interface so the headset sits evenly, with room for your glasses if needed.</dd><dt>Head strap</dt><dd>Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.</dd></dl></noscript></div></section>
     <section class="section soft">
       <div class="container">
         <div class="feature-panel">
@@ -133,7 +144,7 @@ const stage=hx.querySelector('.hx-stage'),img=hx.querySelector('.hx-photo'),over
 let selected='usb',view='left',zoom=1,mode='photo';
 const markerParts=parts.flatMap(p=>(p.hotspots||[{view:p.view,point:p.point,offset:p.offset}]).map(h=>({...p,...h})));
 const markers=markerParts.map(p=>{
- const b=document.createElement('button');b.type='button';b.className='hx-hotspot';b.dataset.hxPart=p.id;b.setAttribute('aria-label',p.name);b.setAttribute('aria-controls','hx-detail');b.innerHTML='<span>'+p.number+'</span>';b.addEventListener('click',()=>select(p.id,false));overlay.append(b);
+ const b=document.createElement('button');b.type='button';b.className='hx-hotspot';b.dataset.hxPart=p.id;b.setAttribute('aria-label',p.name);b.setAttribute('aria-controls','hx-detail');b.innerHTML='<span class="hx-hotspot-number">'+p.number+'</span><span class="hx-hotspot-name">'+p.name+'</span>';b.addEventListener('click',()=>select(p.id,false));overlay.append(b);
  const line=document.createElementNS('http://www.w3.org/2000/svg','line'),dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('r','3.5');lines.append(line,dot);return{p,b,line,dot};
 });
 function draw(){
@@ -146,13 +157,18 @@ function draw(){
   const p=markerParts.find(p=>p.id===selected&&p.view===view);if(p){x=Math.min(12,Math.max(w-v.w*scale-12,w/2-p.point[0]*scale));y=Math.min(12,Math.max(h-v.h*scale-12,h/2-p.point[1]*scale));}
  }
  img.style.width=v.w*scale+'px';img.style.height=v.h*scale+'px';img.style.left=x+'px';img.style.top=y+'px';
+ const placed=[];
  for(const {p,b,line,dot} of markers){
   const px=x+p.point[0]*scale,py=y+p.point[1]*scale;
   const visible=p.view===view&&px>=0&&py>=0&&px<=w&&py<=h;
   b.hidden=!visible;line.style.display=dot.style.display=visible?'':'none';
   if(!visible)continue;
-  const bx=Math.max(24,Math.min(w-24,px+p.offset[0])),by=Math.max(24,Math.min(h-24,py+p.offset[1]));
-  b.style.left=bx+'px';b.style.top=by+'px';line.setAttribute('x1',px);line.setAttribute('y1',py);line.setAttribute('x2',bx);line.setAttribute('y2',by);dot.setAttribute('cx',px);dot.setAttribute('cy',py);
+  const bw=b.offsetWidth,bh=b.offsetHeight;
+  const bx=Math.max(8,Math.min(w-bw-8,px+p.offset[0]));
+  let by=Math.max(8,Math.min(h-bh-8,py+p.offset[1]-bh/2));
+  for(const r of placed){if(bx<r.x+r.w+6&&bx+bw+6>r.x&&by<r.y+r.h+6&&by+bh+6>r.y){by=r.y+r.h+8;if(by+bh>h-8)by=Math.max(8,r.y-bh-8);}}
+  placed.push({x:bx,y:by,w:bw,h:bh});
+  b.style.left=bx+'px';b.style.top=by+'px';line.setAttribute('x1',px);line.setAttribute('y1',py);line.setAttribute('x2',bx+18);line.setAttribute('y2',by+bh/2);dot.setAttribute('cx',px);dot.setAttribute('cy',py);
  }
 }
 function setMode(next){
@@ -173,11 +189,12 @@ function select(id,changeView=true){
  hx.querySelectorAll('[data-hx-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hxPart===id)));
  if(changeView)setView(p.view);else draw();
 }
-hx.querySelectorAll('.hx-list button').forEach(b=>b.addEventListener('click',()=>{select(b.dataset.hxPart);if(matchMedia('(max-width:800px)').matches)hx.querySelector('.hx-shell').scrollIntoView({behavior:'auto',block:'start'});}));
 hx.querySelectorAll('.hx-mode button').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
 hx.querySelector('.hx-return').addEventListener('click',()=>setMode('photo'));
 hx.querySelectorAll('[data-hx-zoom]').forEach(b=>b.addEventListener('click',()=>{zoom=Math.max(1,Math.min(2,zoom+Number(b.dataset.hxZoom)*.25));draw();}));
 hx.querySelector('#hx-reset').addEventListener('click',()=>select('usb'));
+function stepView(step){const keys=Object.keys(views),v=keys[(keys.indexOf(view)+step+keys.length)%keys.length];const first=markerParts.find(p=>p.view===v);if(first)select(first.id,false);setView(v);}
+hx.querySelectorAll('[data-hx-step]').forEach(b=>b.addEventListener('click',()=>stepView(Number(b.dataset.hxStep))));
 stage.addEventListener('keydown',e=>{if(e.target!==stage||!['ArrowLeft','ArrowRight'].includes(e.key))return;e.preventDefault();const keys=Object.keys(views),step=e.key==='ArrowRight'?1:-1;const v=keys[(keys.indexOf(view)+step+keys.length)%keys.length];const first=markerParts.find(p=>p.view===v);if(first)select(first.id,false);setView(v);});
 img.addEventListener('load',()=>{hx.querySelector('.hx-image-error').hidden=true;overlay.hidden=false;draw();});img.addEventListener('error',()=>{hx.querySelector('.hx-image-error').hidden=false;overlay.hidden=true;});
 new ResizeObserver(draw).observe(stage);select('usb');
