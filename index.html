@@ -185,7 +185,7 @@ function setView(key){
 }
 function select(id,changeView=true){
  const p=parts.find(p=>p.id===id);if(!p)return;selected=id;
- detail.querySelector('.hx-tag').textContent=p.kind;detail.querySelector('h3').textContent=p.name;detail.querySelector('.hx-location').textContent=p.location;detail.querySelector('.hx-description').textContent=p.text;
+ detail.querySelector('.hx-tag').textContent=p.kind;const heading=detail.querySelector('h3');heading.textContent=p.id==='volume'?'Volume buttons':p.name;if(p.id==='volume'){const symbols=document.createElement('span');symbols.textContent='(+ / −)';symbols.style.display='block';symbols.style.whiteSpace='nowrap';heading.append(symbols);}detail.querySelector('.hx-location').textContent=p.location;detail.querySelector('.hx-description').textContent=p.text;
  hx.querySelectorAll('[data-hx-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hxPart===id)));
  if(changeView)setView(p.view);else draw();
 }
