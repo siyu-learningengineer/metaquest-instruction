@@ -17,6 +17,8 @@
 .walkthrough-copy h2{font-size:clamp(25px,2.6vw,36px);line-height:1.2;letter-spacing:-.025em;margin:0 0 18px}
 .walkthrough-copy p{color:var(--muted);line-height:1.65;margin:0}
 @media(max-width:700px){.walkthrough-row{grid-template-columns:minmax(0,1fr);gap:18px}.walkthrough-picture{min-height:180px;aspect-ratio:16/9}.walkthrough-copy{padding:0 0 12px}}
+.walkthrough .walkthrough-picture{min-height:0;aspect-ratio:auto;overflow:hidden;background:#fff}
+.walkthrough-picture img{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
@@ -41,7 +43,7 @@
         <div class="section-heading"><h1>Step by Step</h1></div>
         <div class="walkthrough-rows">
           <article class="walkthrough-row" aria-labelledby="step-1-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-picture"><img src="assets/steps/step-1.webp" alt="A finger pressing the Meta Quest 3 power button." width="1024" height="647" loading="eager"></div>
             <div class="walkthrough-copy">
               <p class="walkthrough-number">Step 1</p>
               <h2 id="step-1-title">Turn on the headset</h2>
@@ -49,7 +51,7 @@
             </div>
           </article>
           <article class="walkthrough-row" aria-labelledby="step-2-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-picture"><img src="assets/steps/step-2.webp" alt="Adjusting the top and rear headset straps." width="1024" height="765" loading="lazy"></div>
             <div class="walkthrough-copy">
               <p class="walkthrough-number">Step 2</p>
               <h2 id="step-2-title">Put on and adjust the headset</h2>
@@ -57,7 +59,7 @@
             </div>
           </article>
           <article class="walkthrough-row" aria-labelledby="step-3-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-picture"><img src="assets/steps/step-3.webp" alt="A finger beside the lens adjustment wheel." width="1024" height="647" loading="lazy"></div>
             <div class="walkthrough-copy">
               <p class="walkthrough-number">Step 3</p>
               <h2 id="step-3-title">Make the view clear</h2>
@@ -65,7 +67,7 @@
             </div>
           </article>
           <article class="walkthrough-row" aria-labelledby="step-4-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-picture"><img src="assets/steps/step-4.webp" alt="Holding both controllers with wrist straps attached." width="1024" height="765" loading="lazy"></div>
             <div class="walkthrough-copy">
               <p class="walkthrough-number">Step 4</p>
               <h2 id="step-4-title">Pick up the controllers</h2>
@@ -73,19 +75,11 @@
             </div>
           </article>
           <article class="walkthrough-row" aria-labelledby="step-5-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-picture"><img src="assets/steps/step-5.webp" alt="Meta account setup on a phone beside the headset app menu." width="1024" height="572" loading="lazy"></div>
             <div class="walkthrough-copy">
               <p class="walkthrough-number">Step 5</p>
               <h2 id="step-5-title">Follow the setup instructions</h2>
               <p>Follow the instructions inside the headset to prepare your play area and connect to Wi-Fi.</p>
-            </div>
-          </article>
-          <article class="walkthrough-row" aria-labelledby="step-6-title">
-            <div class="walkthrough-picture" aria-hidden="true"></div>
-            <div class="walkthrough-copy">
-              <p class="walkthrough-number">Step 6</p>
-              <h2 id="step-6-title">Open a learning activity</h2>
-              <p>Open the app or website your teacher has selected.</p>
             </div>
           </article>
         </div>
