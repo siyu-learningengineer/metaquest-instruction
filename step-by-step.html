@@ -6,6 +6,18 @@
   <meta name="description" content="Step by Step — Meta Quest 3 Teacher Guide.">
   <title>Meta Quest 3 for Teachers | Step by Step</title>
   <link rel="stylesheet" href="style.css">
+<style>
+.walkthrough .section-heading h1{font-size:clamp(36px,5vw,62px);line-height:1.05;letter-spacing:-.05em;margin:0}
+.walkthrough-rows{display:grid;gap:32px}
+.walkthrough-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:0 0 32px;border-bottom:1px solid var(--line)}
+.walkthrough-row:last-child{border-bottom:0;padding-bottom:0}
+.walkthrough-picture{min-height:270px;aspect-ratio:4/3;background:var(--soft);border:1px solid var(--line);border-radius:24px}
+.walkthrough-copy{min-width:0;padding:20px 0}
+.walkthrough-copy .walkthrough-number{color:#0866ff;font-weight:700;font-size:14px;letter-spacing:.06em;margin:0 0 12px}
+.walkthrough-copy h2{font-size:clamp(25px,2.6vw,36px);line-height:1.2;letter-spacing:-.025em;margin:0 0 18px}
+.walkthrough-copy p{color:var(--muted);line-height:1.65;margin:0}
+@media(max-width:700px){.walkthrough-row{grid-template-columns:minmax(0,1fr);gap:18px}.walkthrough-picture{min-height:180px;aspect-ratio:16/9}.walkthrough-copy{padding:0 0 12px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -24,7 +36,61 @@
   </header>
 
   <main id="main">
-    <section class="section"><div class="container"><div class="section-heading"><h1>Step by Step</h1></div></div></section>
+    <section class="section walkthrough">
+      <div class="container">
+        <div class="section-heading"><h1>Step by Step</h1></div>
+        <div class="walkthrough-rows">
+          <article class="walkthrough-row" aria-labelledby="step-1-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 1</p>
+              <h2 id="step-1-title">Turn on the headset</h2>
+              <p>Press and hold the power button to turn on your Meta Quest 3.</p>
+            </div>
+          </article>
+          <article class="walkthrough-row" aria-labelledby="step-2-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 2</p>
+              <h2 id="step-2-title">Put on and adjust the headset</h2>
+              <p>Adjust the straps until the headset feels secure and comfortable.</p>
+            </div>
+          </article>
+          <article class="walkthrough-row" aria-labelledby="step-3-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 3</p>
+              <h2 id="step-3-title">Make the view clear</h2>
+              <p>Turn the lens adjustment wheel until the image looks clear.</p>
+            </div>
+          </article>
+          <article class="walkthrough-row" aria-labelledby="step-4-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 4</p>
+              <h2 id="step-4-title">Pick up the controllers</h2>
+              <p>Put on the wrist straps. Point at an item and press the trigger to select it.</p>
+            </div>
+          </article>
+          <article class="walkthrough-row" aria-labelledby="step-5-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 5</p>
+              <h2 id="step-5-title">Follow the setup instructions</h2>
+              <p>Follow the instructions inside the headset to prepare your play area and connect to Wi-Fi.</p>
+            </div>
+          </article>
+          <article class="walkthrough-row" aria-labelledby="step-6-title">
+            <div class="walkthrough-picture" aria-hidden="true"></div>
+            <div class="walkthrough-copy">
+              <p class="walkthrough-number">Step 6</p>
+              <h2 id="step-6-title">Open a learning activity</h2>
+              <p>Open the app or website your teacher has selected.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <nav class="page-nav" aria-label="Page navigation">
