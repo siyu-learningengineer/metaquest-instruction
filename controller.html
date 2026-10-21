@@ -6,6 +6,12 @@
   <meta name="description" content="A simple guide to the Meta Quest 3 controllers.">
   <title>Meta Quest 3 for Teachers | Controller</title>
   <link rel="stylesheet" href="style.css">
+<style>
+.controllers-page{padding:48px 18px 64px}.controllers-intro{max-width:850px;margin-bottom:28px}.controllers-intro h1{font-size:clamp(32px,4vw,52px);line-height:1.08;letter-spacing:-.04em;margin:0 0 16px}.controllers-intro p{color:var(--muted)}.control-boards{display:grid;grid-template-columns:1fr 1fr;gap:24px}.control-board{min-width:0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#f7f8fa}.control-board header{padding:20px 24px;display:flex;gap:12px;align-items:center;background:white}.control-board h2{font-size:24px;margin:0}.hand-tag{background:#012169;color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-size:15px;font-weight:700}.control-photo{position:relative;isolation:isolate}.control-photo>img{width:100%;height:auto;display:block}.control-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.control-lines path{stroke:#4B9CD3;stroke-width:.35;fill:none}.control-lines circle{fill:#4B9CD3;stroke:white;stroke-width:.2}.control-lines g.active path{stroke:#012169;stroke-width:.55}.control-lines g.active circle{fill:#012169}.control-callout{position:absolute;width:26%;z-index:2}.control-callout.left{left:1%}.control-callout.right{right:1%}.control-callout button{width:100%;min-height:40px;padding:8px 5px;border:0;border-radius:12px;background:#4B9CD3;color:#101114;font:inherit;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px #01216916}.control-callout button[aria-expanded=true]{background:#012169;color:white}.control-callout button:hover{box-shadow:0 0 0 3px #4B9CD350}.control-callout button:focus-visible{outline:3px solid #012169;outline-offset:3px}.control-callout p{margin:5px 0 0;padding:9px;background:white;border:1px solid #dfe3e8;border-radius:10px;font-size:12px;line-height:1.45;color:#343b45;box-shadow:0 4px 12px #01216910}.control-callout [hidden]{display:none}.trigger-note{margin:0 16px 18px;padding:16px;background:#fff;border-left:4px solid #4B9CD3;border-radius:10px}.trigger-note h3{font-size:16px;margin:0 0 7px}.trigger-note p{font-size:15px;line-height:1.5;margin:0;color:var(--muted)}.mapping-note,.controller-source{font-size:14px;color:var(--muted);line-height:1.6;margin:22px 0}.controller-basics{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--line);padding-top:24px}.controller-basics h2{font-size:20px;margin:0 0 8px}.controller-basics p{font-size:16px;line-height:1.6;color:var(--muted);margin:0}
+@media(max-width:1050px){.control-boards{grid-template-columns:1fr;max-width:700px;margin:auto}.control-callout button{font-size:15px}.control-callout p{font-size:14px}}
+@media(max-width:480px){.controllers-page{padding-top:30px}.control-boards{gap:20px}.control-callout button{font-size:11px;min-height:34px}.control-callout p{font-size:11px;padding:5px}.controller-basics{grid-template-columns:1fr}.control-board header{padding:16px}.control-board h2{font-size:21px}}
+.control-callout p{position:absolute;top:0;left:calc(100% + 8px);width:160px;margin:0;z-index:4;pointer-events:none}.control-callout.right p{left:auto;right:calc(100% + 8px)}.control-callout:has(button[aria-expanded=true]){z-index:4}@media(max-width:480px){.control-callout p{width:135px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -23,104 +29,29 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Use the controllers with confidence.</h1>
-        <p class="hero-copy"> Hold each controller without squeezing it. 
-          Point at an item and press the trigger to select it.</p>
-      </div>
-    </section>
-
-    <section class="section soft">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Controller functions</p>
-          <h2>Learn the controls you will use most.</h2>
-          <p>Some apps use the buttons differently. The app usually shows its controls when it starts.</p>
-        </div>
-
-        <div class="controller-grid">
-          <article class="controller-card">
-            <h2>Left controller</h2>
-            <p>Use this hand to move and open app menus.</p>
-            <div class="control-row">
-              <div class="control-name">Thumbstick</div>
-              <div class="control-use">Move or scroll. The exact action depends on the app.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">X and Y buttons</div>
-              <div class="control-use">Use extra actions chosen by the app.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Menu button</div>
-              <div class="control-use">Open the menu inside many apps.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Trigger</div>
-              <div class="control-use">Select an item when you point at it.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Side button</div>
-              <div class="control-use">Hold or pick up a digital item.</div>
-            </div>
-          </article>
-
-          <article class="controller-card">
-            <h2>Right controller</h2>
-            <p>Use this hand for selection and the main Quest menu.</p>
-            <div class="control-row">
-              <div class="control-name">Thumbstick</div>
-              <div class="control-use">Move or scroll. The exact action depends on the app.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">A and B buttons</div>
-              <div class="control-use">Use extra actions chosen by the app.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Meta button</div>
-              <div class="control-use">Open the main Quest menu. Hold it to place the view in front of you again.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Trigger</div>
-              <div class="control-use">Select an item when you point at it.</div>
-            </div>
-            <div class="control-row">
-              <div class="control-name">Side button</div>
-              <div class="control-use">Hold or pick up a digital item.</div>
-            </div>
-          </article>
-        </div>
-
-        <div class="callout">
-          <strong>Safe practice</strong>
-          Keep the wrist straps on. Keep both feet still while you learn the buttons. Practice selecting one menu item before opening a lesson.
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="feature-panel">
-          <p class="eyebrow">Quick practice</p>
-          <h2>Try these three actions.</h2>
-          <ul class="plain-list">
-            <li><strong>Point and select</strong>Point at a menu item. Press the trigger once.</li>
-            <li><strong>Scroll</strong>Move the thumbstick slowly to move through a page or list.</li>
-            <li><strong>Return to the main menu</strong>Press the Meta button on the right controller.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <nav class="page-nav" aria-label="Page navigation">
-    <div class="page-nav-inner">
-      <a class="page-link secondary" href="vr-types.html">Previous: Compare VR types</a>
-      <a class="page-link" href="internet.html">Next: Check the internet</a>
-    </div>
-  </nav>
+  <main id="main" class="controllers-page"><div class="container">
+<div class="controllers-intro"><p class="eyebrow">Explore your controllers</p><h1>Learn each button where you see it.</h1><p>Select a label beside either controller. Its function appears beside that control.</p></div>
+<div class="control-boards"><article class="control-board" aria-labelledby="left-title"><header><span class="hand-tag">L</span><h2 id="left-title">Left controller</h2></header>
+<div class="control-photo"><img src="assets/controllers/left.webp" width="1024" height="1024" alt="left controller showing X, Y and Menu buttons, thumbstick and side grip." decoding="async">
+<svg class="control-lines" viewBox="0 0 100 100" aria-hidden="true"><g data-line="left-0"><path d="M 26 16 L 40.5 25.5"/><circle cx="40.5" cy="25.5" r="0.8"/></g><g data-line="left-1"><path d="M 74 33 L 49.5 35.5"/><circle cx="49.5" cy="35.5" r="0.8"/></g><g data-line="left-2"><path d="M 74 15 L 55 27"/><circle cx="55" cy="27" r="0.8"/></g><g data-line="left-3"><path d="M 26 42 L 39.5 38"/><circle cx="39.5" cy="38" r="0.8"/></g><g data-line="left-4"><path d="M 74 58 L 55.5 56"/><circle cx="55.5" cy="56" r="0.8"/></g></svg>
+<div class="control-callout left" style="top:13%"><button type="button" data-control="left-0" aria-expanded="true" aria-controls="left-0-text">Thumbstick<span aria-hidden="true"> +</span></button><p id="left-0-text">Tilt to scroll or move. Press down for an extra app action.</p></div><div class="control-callout right" style="top:30%"><button type="button" data-control="left-1" aria-expanded="false" aria-controls="left-1-text">X<span aria-hidden="true"> +</span></button><p id="left-1-text" hidden>Usually selects or accepts. The app may assign another action.</p></div><div class="control-callout right" style="top:12%"><button type="button" data-control="left-2" aria-expanded="false" aria-controls="left-2-text">Y<span aria-hidden="true"> +</span></button><p id="left-2-text" hidden>Usually goes back or cancels. Check the app’s instructions.</p></div><div class="control-callout left" style="top:39%"><button type="button" data-control="left-3" aria-expanded="false" aria-controls="left-3-text">Menu<span aria-hidden="true"> +</span></button><p id="left-3-text" hidden>Opens or closes the current app’s menu.</p></div><div class="control-callout right" style="top:55%"><button type="button" data-control="left-4" aria-expanded="false" aria-controls="left-4-text">Grip<span aria-hidden="true"> +</span></button><p id="left-4-text" hidden>Squeeze with your middle finger to grab or hold a virtual object.</p></div>
+</div><div class="trigger-note"><h3>Trigger · front, out of view</h3><p>Point at a target, then squeeze with your index finger to select. Trigger input responds to pressure.</p></div></article><article class="control-board" aria-labelledby="right-title"><header><span class="hand-tag">R</span><h2 id="right-title">Right controller</h2></header>
+<div class="control-photo"><img src="assets/controllers/right.webp" width="1024" height="1024" alt="right controller showing A, B and Meta buttons, thumbstick and side grip." decoding="async">
+<svg class="control-lines" viewBox="0 0 100 100" aria-hidden="true"><g data-line="right-0"><path d="M 74 16 L 60 25.5"/><circle cx="60" cy="25.5" r="0.8"/></g><g data-line="right-1"><path d="M 26 33 L 50 35.5"/><circle cx="50" cy="35.5" r="0.8"/></g><g data-line="right-2"><path d="M 26 15 L 45 27"/><circle cx="45" cy="27" r="0.8"/></g><g data-line="right-3"><path d="M 74 42 L 60.5 38"/><circle cx="60.5" cy="38" r="0.8"/></g><g data-line="right-4"><path d="M 26 58 L 44.5 56"/><circle cx="44.5" cy="56" r="0.8"/></g></svg>
+<div class="control-callout right" style="top:13%"><button type="button" data-control="right-0" aria-expanded="true" aria-controls="right-0-text">Thumbstick<span aria-hidden="true"> +</span></button><p id="right-0-text">Tilt to scroll or move. Press down for an extra app action.</p></div><div class="control-callout left" style="top:30%"><button type="button" data-control="right-1" aria-expanded="false" aria-controls="right-1-text">A<span aria-hidden="true"> +</span></button><p id="right-1-text" hidden>Usually selects or accepts. The app may assign another action.</p></div><div class="control-callout left" style="top:12%"><button type="button" data-control="right-2" aria-expanded="false" aria-controls="right-2-text">B<span aria-hidden="true"> +</span></button><p id="right-2-text" hidden>Usually goes back or cancels. Check the app’s instructions.</p></div><div class="control-callout right" style="top:39%"><button type="button" data-control="right-3" aria-expanded="false" aria-controls="right-3-text">Meta<span aria-hidden="true"> +</span></button><p id="right-3-text" hidden>Opens or closes the universal menu for settings and apps.</p></div><div class="control-callout left" style="top:55%"><button type="button" data-control="right-4" aria-expanded="false" aria-controls="right-4-text">Grip<span aria-hidden="true"> +</span></button><p id="right-4-text" hidden>Squeeze with your middle finger to grab or hold a virtual object.</p></div>
+</div><div class="trigger-note"><h3>Trigger · front, out of view</h3><p>Point at a target, then squeeze with your index finger to select. Trigger input responds to pressure.</p></div></article></div>
+<p class="mapping-note">These are common mappings. Apps can assign different actions; follow their on-screen prompts. The Meta button is a system control.</p>
+<div class="controller-basics"><article><h2>Point and select</h2><p>Aim at an object directly or with a pointer ray, then use the trigger.</p></article><article><h2>Move and feel</h2><p>Controllers track position and rotation. Vibration can confirm actions.</p></article><article><h2>Try it</h2><p>Wear the wrist straps. Find a button, read its label, then try it in your learning app.</p></article></div>
+<p class="controller-source">Reference: <a href="https://developers.meta.com/vr/design/controllers/" target="_blank" rel="noopener noreferrer">Meta — Controllers</a>.</p>
+</div></main>
 
   <footer class="site-footer">Meta Quest 3 Teacher Guide</footer>
+<script>
+document.querySelectorAll('.control-board').forEach(board=>{
+ const buttons=board.querySelectorAll('[data-control]');
+ function sync(){buttons.forEach(b=>{const on=b.getAttribute('aria-expanded')==='true';board.querySelector('[data-line="'+b.dataset.control+'"]').classList.toggle('active',on);b.querySelector('span').textContent=on?' −':' +';});}
+ buttons.forEach(button=>button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';buttons.forEach(b=>{const on=b===button&&open;b.setAttribute('aria-expanded',String(on));document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});sync();}));sync();
+});
+</script>
 </body>
 </html>
