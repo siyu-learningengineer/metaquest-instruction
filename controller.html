@@ -26,6 +26,10 @@
 .control-callout [hidden]{display:none}
 @media(max-width:1050px){.control-callout p,.control-callout.right p{font-size:13px}}
 @media(max-width:600px){.control-callout p,.control-callout.right p{font-size:12px}.control-callout button{font-size:12px;min-height:36px}}
+
+/* Yellow for unselected Menu and Meta; selected states retain Duke Blue. */
+.control-callout button[data-control="left-3"][aria-expanded="false"],
+.control-callout button[data-control="right-3"][aria-expanded="false"]{background:#FFA400}
 </style>
 </head>
 <body>
