@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A detailed comparison of head-mounted displays, desktop VR, and 360-degree video.">
+  <meta name="description" content="Compare head-mounted displays, desktop VR, device VR on phones and tablets, and low-cost VR viewers.">
   <title>Meta Quest 3 for Teachers | Compare VR Types</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -12,13 +12,13 @@
     .vr-comparison-section .section-heading h1{font-size:clamp(42px,5.1vw,68px);line-height:1.05;letter-spacing:-.05em;margin:0 0 24px}
     .module-summary{max-width:1120px;margin:0;color:#5f6672;font-size:clamp(18px,1.7vw,24px);line-height:1.55;font-weight:700}
     .comparison-wrap{overflow-x:auto;border:1px solid #d8dee7;border-radius:26px;background:#fff;box-shadow:0 18px 44px rgba(28,39,58,.06)}
-    .detailed-comparison{width:100%;min-width:1040px;border-collapse:separate;border-spacing:0;text-align:center}
+    .detailed-comparison{width:100%;min-width:1180px;border-collapse:separate;border-spacing:0;text-align:center}
     .detailed-comparison th,.detailed-comparison td{padding:22px 24px;border-right:1px solid #dfe4eb;border-bottom:1px solid #dfe4eb;vertical-align:top;font-size:17px;line-height:1.45}
     .detailed-comparison th:last-child,.detailed-comparison td:last-child{border-right:0}
     .detailed-comparison tr:last-child th,.detailed-comparison tr:last-child td{border-bottom:0}
     .detailed-comparison thead th{background:#012169;color:#fff;font-weight:750;vertical-align:middle}
     .detailed-comparison thead th:first-child{width:15%}
-    .detailed-comparison thead th:not(:first-child){width:28.333%}
+    .detailed-comparison thead th:not(:first-child){width:21.25%}
     .detailed-comparison tbody th{color:#131820;font-weight:750}
     .detailed-comparison tbody td{color:#5f6672}
     .detailed-comparison tbody tr:nth-child(odd) th,.detailed-comparison tbody tr:nth-child(odd) td{background:#fff}
@@ -27,6 +27,10 @@
     .detailed-comparison .media-row td{padding:14px}
     .detailed-comparison .media-row img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;background:#eef2f7}
     @media(max-width:720px){.vr-comparison-section{padding:58px 0 80px}.vr-comparison-section .section-heading{margin-bottom:32px}.comparison-wrap{border-radius:18px}.detailed-comparison th,.detailed-comparison td{padding:17px 18px;font-size:15px}}
+  .vr-diagram{display:block;width:100%;aspect-ratio:3/2;border-radius:16px}
+    .detailed-comparison thead small{font-weight:400}
+    .comparison-wrap:focus-visible{outline:3px solid #1565d8;outline-offset:4px}
+    .comparison-note{color:#5f6672;font-size:15px;line-height:1.6;margin:18px 0}
   </style>
 </head>
 <body>
@@ -49,18 +53,20 @@
     <section class="vr-comparison-section">
       <div class="container">
         <div class="section-heading">
-          <h1>Difference Between HMD,<br>Desktop VR, and 360° Video.</h1>
-          <p class="module-summary">In this module, instructors will compare three types of immersive technology and identify which format may be most appropriate for different instructional goals.</p>
+          <h1>Compare VR Formats</h1>
+          <p class="module-summary">In this module, instructors will compare four ways to access virtual environments and identify which format may be most appropriate for different instructional goals.</p>
         </div>
 
-        <div class="comparison-wrap">
+        <p class="comparison-note">Here, HMD refers to a dedicated VR headset such as Meta Quest 3; VR Viewers refers to low-cost phone holders with lenses. Device VR uses the phone or tablet screen directly. On smaller screens, scroll across the table to see all four formats.</p>
+        <div class="comparison-wrap" tabindex="0" role="region" aria-label="VR format comparison; scroll horizontally to see all four formats">
           <table class="detailed-comparison">
             <thead>
               <tr>
                 <th scope="col">Comparison Category</th>
                 <th scope="col">HMD (Head-Mounted Display)</th>
                 <th scope="col">Desktop VR</th>
-                <th scope="col">360° Video</th>
+                <th scope="col">Device VR<br><small>Phones and tablets</small></th>
+                <th scope="col">VR Viewers<br><small>Cardboard and plastic</small></th>
               </tr>
             </thead>
             <tbody>
@@ -68,65 +74,76 @@
                 <th scope="row">Visual example</th>
                 <td><img src="assets/vr-types/head-mounted-display.gif" alt="A student using a head-mounted display and two hand controllers in a classroom."></td>
                 <td><img src="assets/vr-types/desktop-vr.gif" alt="A student exploring a three-dimensional environment on a desktop computer with a keyboard and mouse."></td>
-                <td><img src="assets/vr-types/360-video.gif" alt="Students viewing a panoramic 360-degree scene on a tablet."></td>
+                <td><svg class="vr-diagram" viewBox="0 0 300 200" role="img" aria-label="Illustration of a tablet and phone displaying a virtual scene"><rect width="300" height="200" rx="16" fill="#eef6ff"/><rect x="22" y="32" width="195" height="135" rx="12" fill="#012169"/><rect x="32" y="42" width="175" height="115" rx="5" fill="#b7def5"/><path d="M32 135 95 72 143 119 173 86 207 132V157H32Z" fill="#4B9CD3"/><rect x="198" y="65" width="76" height="120" rx="12" fill="#182b49"/><rect x="205" y="76" width="62" height="96" rx="5" fill="#b7def5"/><path d="m205 143 23-34 39 43v20h-62Z" fill="#4B9CD3"/></svg></td>
+                <td><svg class="vr-diagram" viewBox="0 0 300 200" role="img" aria-label="Illustration of a low-cost cardboard phone viewer with two lenses"><rect width="300" height="200" rx="16" fill="#eef6ff"/><path d="m49 65 26-22h154l23 22v101H49Z" fill="#c69c6d" stroke="#87633d" stroke-width="3"/><path d="M49 65h203M75 43v22m154-22v22" fill="none" stroke="#87633d" stroke-width="3"/><rect x="60" y="76" width="181" height="81" rx="12" fill="#dbc09a"/><circle cx="104" cy="115" r="28" fill="#012169"/><circle cx="198" cy="115" r="28" fill="#012169"/><circle cx="104" cy="115" r="19" fill="#4B9CD3"/><circle cx="198" cy="115" r="19" fill="#4B9CD3"/><path d="m135 166 15-24 17 24" fill="#eef6ff" stroke="#87633d" stroke-width="3"/></svg></td>
               </tr>
               <tr>
                 <th scope="row">Basic Definition</th>
                 <td>A wearable device that displays a virtual environment directly in front of the user’s eyes.</td>
                 <td>A virtual environment experienced through a computer screen.</td>
-                <td>A pre-recorded panoramic video that allows users to look around in different directions.</td>
+                <td>A virtual environment explored directly on a smartphone or tablet screen, without a headset.</td>
+                <td>A low-cost cardboard or plastic viewer that holds a compatible smartphone in front of the eyes.</td>
               </tr>
               <tr>
                 <th scope="row">Main Equipment</th>
                 <td>VR headset, controllers, and sometimes motion sensors.</td>
                 <td>Desktop or laptop computer, monitor, keyboard, mouse, or game controller.</td>
-                <td>Smartphone, tablet, computer, or VR headset.</td>
+                <td>Smartphone or tablet with a compatible app or web experience.</td>
+                <td>Cardboard or plastic viewer, compatible smartphone, and a viewer-compatible VR app.</td>
               </tr>
               <tr>
                 <th scope="row">Level of Immersion</th>
                 <td>High; the headset covers much of the user’s field of view.</td>
                 <td>Moderate; the user views the virtual environment on a flat screen.</td>
-                <td>Moderate; users can look around but usually cannot move freely.</td>
+                <td>Limited; the virtual scene stays on a handheld screen while the surrounding room remains visible.</td>
+                <td>More visually immersive than a handheld screen; lenses present a separate view to each eye.</td>
               </tr>
               <tr>
                 <th scope="row">Interaction</th>
                 <td>Users can interact with the virtual environment using controllers, hand gestures, or head movements.</td>
                 <td>Users primarily interact with a keyboard, mouse, or game controller.</td>
-                <td>Interaction is usually limited to changing the viewing direction.</td>
+                <td>Tap or swipe to explore and select. Some apps also respond when the device is turned.</td>
+                <td>Turn your head to look around. Select using gaze or a viewer button, depending on the app and viewer.</td>
               </tr>
               <tr>
                 <th scope="row">Movement</th>
                 <td>Users may be able to walk, turn, or move around in the virtual environment.</td>
                 <td>Movement is usually controlled with a keyboard, mouse, or controller.</td>
-                <td>Users typically remain in the original filming position.</td>
+                <td>Navigate with on-screen controls. Physical movement is tracked only when the app and device support it.</td>
+                <td>Usually tracks head rotation rather than walking. Navigation depends on the app.</td>
               </tr>
               <tr>
                 <th scope="row">Viewpoint</th>
                 <td>Changes in real time according to the user’s head and body movements.</td>
                 <td>Controlled by the mouse, keyboard, or controller.</td>
-                <td>Users can look up, down, left, and right.</td>
+                <td>Changed by dragging on the screen or rotating the device in supported apps.</td>
+                <td>Changes as the user turns or tilts their head.</td>
               </tr>
               <tr>
                 <th scope="row">Degrees of Freedom</th>
                 <td>Often supports six degrees of freedom (6DoF).</td>
                 <td>Depends on the software; usually provides limited movement.</td>
-                <td>Usually supports three degrees of freedom (3DoF).</td>
+                <td>Depends on the app and sensors; touchscreen navigation does not require physical position tracking.</td>
+                <td>Typically three degrees of freedom (3DoF): head rotation, without tracked positional movement.</td>
               </tr>
               <tr>
                 <th scope="row">Typical Content</th>
                 <td>Interactive simulations, virtual laboratories, training programs, and VR games.</td>
                 <td>3D software, simulations, games, and virtual learning platforms.</td>
-                <td>Virtual tours, documentaries, campus tours, and recorded events.</td>
+                <td>Mobile virtual environments, interactive 3D scenes, and virtual tours.</td>
+                <td>Phone-based virtual tours and simple stereoscopic VR experiences.</td>
               </tr>
               <tr>
                 <th scope="row">Educational Uses</th>
                 <td>Hands-on practice, simulations, technical training, and immersive learning.</td>
                 <td>Software training, design activities, data analysis, and virtual demonstrations.</td>
-                <td>Observing real-world locations, virtual field trips, and environmental exploration.</td>
+                <td>Explore a virtual location or 3D model using phones or tablets already available in class.</td>
+                <td>Introduce immersive viewing and virtual field trips using inexpensive viewers.</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="comparison-note">VR viewer reference: <a href="https://developers.google.com/cardboard/develop/ios/quickstart">Google Cardboard: smartphone rendering, head tracking, and viewer input</a>.</p>
       </div>
     </section>
   </main>
