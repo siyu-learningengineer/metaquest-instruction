@@ -25,13 +25,14 @@
     .detailed-comparison tbody tr:nth-child(even) th,.detailed-comparison tbody tr:nth-child(even) td{background:#eef6ff}
     .detailed-comparison .media-row th{vertical-align:middle}
     .detailed-comparison .media-row td{padding:14px}
-    .detailed-comparison .media-row img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:16px;background:#eef2f7}
+    .detailed-comparison .media-row img{display:block;width:100%;max-width:240px;height:auto;aspect-ratio:3/2;object-fit:contain;margin:0 auto;border-radius:12px;background:#eef2f7}
     @media(max-width:720px){.vr-comparison-section{padding:58px 0 80px}.vr-comparison-section .section-heading{margin-bottom:32px}.comparison-wrap{border-radius:18px}.detailed-comparison th,.detailed-comparison td{padding:17px 18px;font-size:15px}}
   .vr-diagram{display:block;width:100%;aspect-ratio:3/2;border-radius:16px}
     .detailed-comparison thead small{font-weight:400}
     .comparison-wrap:focus-visible{outline:3px solid #1565d8;outline-offset:4px}
     .comparison-note{color:#5f6672;font-size:15px;line-height:1.6;margin:18px 0}
-  </style>
+  @media(min-width:1000px){.detailed-comparison{min-width:0;table-layout:fixed}.detailed-comparison th,.detailed-comparison td{padding:18px 12px;overflow-wrap:break-word}.detailed-comparison .media-row td{padding:12px 10px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
