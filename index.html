@@ -89,6 +89,17 @@
  .hx-detail{border-left:0;border-top:1px solid #e0e3e8}
 }
 .hx .teacher-reminder{margin-top:20px}
+/* Overview: model on the left, heading and introduction on the right. */
+.intro-inner{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:36px;align-items:start}
+.intro-model{margin:0;min-width:0}
+.intro-model iframe{display:block;width:100%;height:340px;border:0;border-radius:12px;background:#f4f6f8}
+.intro-model figcaption{margin-top:12px;font-size:13px;line-height:1.45;color:#656b73;letter-spacing:normal}
+.intro-model figcaption a{text-underline-offset:3px}
+.intro .intro-copy h2{font-size:clamp(32px,3.5vw,48px);line-height:1.12;letter-spacing:normal;margin:0 0 20px}
+.intro .intro-copy h2 span{display:inline;white-space:normal}
+.intro-section-name::before{content:" "}
+.intro .intro-copy p{text-align:left;line-height:1.55}
+@media(max-width:750px){.intro-inner{grid-template-columns:minmax(0,1fr);gap:28px}.intro-model iframe{height:320px}.intro .intro-copy h2{font-size:36px}}
 </style>
 </head>
 <body>
@@ -111,20 +122,23 @@
   <main id="main">
 
 <section class="intro" aria-labelledby="intro-heading"><div class="intro-inner">
-<h2 id="intro-heading"><span class="intro-product-name">Meta Quest 3</span><span class="intro-section-name">Overview</span></h2>
+<figure class="intro-model">
+<iframe src="https://sketchfab.com/models/65a813833dc04eeeb7d33bdca58c184c/embed?autostart=1&amp;dnt=1" title="Meta Quest 3 by Elin — interactive 3D model" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
+<figcaption>Drag to rotate · Scroll to zoom<br>3D model: <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">“Meta Quest 3”</a> by <a href="https://sketchfab.com/ElinHohler" target="_blank" rel="noopener noreferrer">Elin</a>, via Sketchfab · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
 <div class="intro-copy">
+<h2 id="intro-heading"><span class="intro-product-name">Meta Quest 3</span><span class="intro-section-name">Overview</span></h2>
 <p>Meta Quest 3 is a virtual reality (VR) device that includes a headset and two controllers. The headset lets you look around a virtual environment, while the controllers help you select, move, and interact with objects. In supported apps, you can also use your own hands to interact without holding the controllers. By the end of this training, you will be able to set up the headset, navigate basic menus, and open a learning activity.</p>
 </div>
 </div></section>
 
 
 <section class="section hx" id="headset-explorer" aria-labelledby="hx-heading"><div class="container">
-<div class="section-heading"><p class="eyebrow">Explore your headset</p><h2 id="hx-heading">A closer look at Quest 3</h2><p>Explore the 3D model, or select a point in the photo guide to learn each control.</p></div>
-<div class="hx-shell"><div class="hx-topbar"><strong>Meta Quest 3</strong><div class="hx-mode" aria-label="Explore mode"><button type="button" data-mode="photo" aria-pressed="true">Photo guide</button><button type="button" data-mode="model" aria-pressed="false">3D model ↗</button></div></div>
+<div class="section-heading"><p class="eyebrow">Explore your headset</p><h2 id="hx-heading">A closer look at Quest 3</h2><p>Select a point in the photo guide to learn each control.</p></div>
+<div class="hx-shell"><div class="hx-topbar"><strong>Meta Quest 3</strong></div>
 <div class="hx-layout"><nav class="hx-sidebar" aria-label="Headset features"><h3>Headset features</h3><div class="hx-list"></div></nav><div class="hx-model"><div class="hx-stage" tabindex="0" role="group" aria-label="Interactive product photographs. Left and right arrow keys switch views." aria-describedby="hx-hint"><img class="hx-photo" src="assets/quest3/power-usbc-v2.webp" alt="Meta Quest 3, left side" draggable="false"><div class="hx-overlay"><svg class="hx-lines" aria-hidden="true"></svg></div><p class="hx-image-error" hidden role="status">This image could not load. The English descriptions are still available below.</p></div><div class="hx-tools"><p id="hx-hint">Select a labeled point · Use arrows to view other parts</p><div><button type="button" data-hx-zoom="-1" aria-label="Zoom out">−</button><button type="button" data-hx-zoom="1" aria-label="Zoom in">+</button><button type="button" id="hx-reset">Reset view</button><button type="button" data-hx-step="-1" aria-label="Previous product image">←</button><button type="button" data-hx-step="1" aria-label="Next product image">→</button></div></div>
-<div class="hx-sketchfab" hidden><iframe title="Meta Quest 3 by Elin — interactive 3D model" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen></iframe><p class="hx-embed-status" role="status">Drag to rotate and scroll to zoom. If the viewer stays blank, <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">open the 3D model on Sketchfab</a>.</p><button type="button" class="hx-return">Locate buttons in the photo guide</button></div>
 </div><aside id="hx-detail" class="hx-detail" aria-live="polite" aria-atomic="true"><span class="hx-tag">Charging port</span><h3>USB-C charging port (Type-C)</h3><p class="hx-location">Left side · on the strap arm</p><p class="hx-description">Connect the charging cable to this USB-C (Type-C) port to charge the headset.</p></aside></div></div>
-<p class="hx-note">Hotspots are placed on the supplied product images. Left and right refer to the person wearing the headset.</p><p class="hx-note">3D model: <a href="https://sketchfab.com/3d-models/meta-quest-3-65a813833dc04eeeb7d33bdca58c184c" target="_blank" rel="noopener noreferrer">“Meta Quest 3”</a> by <a href="https://sketchfab.com/ElinHohler" target="_blank" rel="noopener noreferrer">Elin</a>, via Sketchfab · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Original model, shown without geometry edits.</p><div class="callout teacher-reminder">
+<p class="hx-note">Hotspots are placed on the supplied product images. Left and right refer to the person wearing the headset.</p><div class="callout teacher-reminder">
           <strong>Teacher reminder</strong>
           Check the app, space, time limit, and student needs before the lesson. Clean the headset between users.
         </div><noscript><p>Enable JavaScript to select views and hotspots.</p><dl><dt>USB-C charging port (Type-C)</dt><dd>Connect the charging cable to this USB-C (Type-C) port to charge the headset.</dd><dt>Power button</dt><dd>Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.</dd><dt>Volume buttons (+ / −)</dt><dd>Press the + end to increase the volume. Press the − end to decrease it. Both controls are on the same long rocker on the underside of the headset.</dd><dt>Lens adjustment wheel</dt><dd>Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.</dd><dt>Depth Adjustment</dt><dd>Take off the headset. Press and hold the Depth Adjustment on the left and right sides at the same time to adjust the facial interface so the headset sits evenly, with room for your glasses if needed.</dd><dt>Head strap</dt><dd>Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.</dd></dl></noscript></div></section>
@@ -139,7 +153,7 @@
 (()=>{
 const hx=document.getElementById('headset-explorer'),parts=[{"id":"usb","name":"USB-C charging port (Type-C)","kind":"Charging port","location":"Left side · on the strap arm","text":"Connect the charging cable to this USB-C (Type-C) port to charge the headset.","view":"left","point":[884,484],"offset":[40,-30],"number":1},{"id":"power","name":"Power button","kind":"Button","location":"Left side · round button below the USB-C port","text":"Press once to wake the headset or put it to sleep. Press and hold to turn it on when it is off, or to open the power menu when it is on.","view":"left","point":[815,624],"offset":[40,15],"number":2},{"id":"volume","name":"Volume buttons (+ / −)","kind":"Two-ended rocker","location":"Underside · volume rocker","text":"Press the + end to increase the volume. Press the − end to decrease it. Both controls are on the same long rocker on the underside of the headset.","view":"bottom","point":[951,716],"offset":[-24,-36],"number":3},{"id":"ipd","name":"Lens adjustment wheel","kind":"Adjustment","location":"Underside · opposite the volume rocker","text":"Turn the wheel to move the lenses closer together or farther apart. Match their spacing to your eyes for a clearer, more comfortable view.","view":"bottom","point":[1408,757],"offset":[25,-28],"number":4},{"id":"eye-relief","name":"Depth Adjustment","kind":"Adjustment button","location":"Inside · both sides of the facial interface","text":"Take off the headset. Press and hold the Depth Adjustment on the left and right sides at the same time to adjust the facial interface so the headset sits evenly, with room for your glasses if needed.","view":"inside","point":[425,623],"offset":[-36,0],"number":5,"hotspots":[{"view":"inside","point":[425,623],"offset":[-36,0]},{"view":"inside","point":[1680,595],"offset":[36,0]}]},{"id":"strap","name":"Head strap","kind":"Fit adjustment","location":"Top and back of the headset","text":"Adjust the top strap and the two rear sliders for a secure, comfortable fit. The headset should stay in place without feeling too tight.","view":"strap","point":[431,299],"offset":[42,0],"number":6}],views={"left":{"label":"Power & USB-C","file":"power-usbc-v2.webp","w":1902,"h":1132,"alt":"Left side of Meta Quest 3 showing the USB-C charging port and the round power button below it."},"bottom":{"label":"Lower edge","file":"front.webp","w":1808,"h":976,"alt":"Lower front edge showing the volume rocker and lens spacing wheel."},"inside":{"label":"Depth Adjustment","file":"eye-relief.webp","w":2020,"h":779,"alt":"Interior view of Meta Quest 3 showing the Depth Adjustment on both the left and right sides."},"strap":{"label":"Head strap","file":"strap.webp","w":874,"h":822,"alt":"Top view of the soft top strap and rear adjustment sliders."}};
 const stage=hx.querySelector('.hx-stage'),img=hx.querySelector('.hx-photo'),overlay=hx.querySelector('.hx-overlay'),lines=hx.querySelector('.hx-lines'),detail=hx.querySelector('.hx-detail');
-let selected='usb',view='left',zoom=1,mode='photo';
+let selected='usb',view='left',zoom=1;
 const featureList=hx.querySelector('.hx-list');
 parts.forEach(p=>{
  const b=document.createElement('button');b.type='button';b.dataset.hxPart=p.id;
@@ -175,15 +189,8 @@ function draw(){
   b.style.left=bx+'px';b.style.top=by+'px';line.setAttribute('x1',px);line.setAttribute('y1',py);line.setAttribute('x2',bx+18);line.setAttribute('y2',by+bh/2);dot.setAttribute('cx',px);dot.setAttribute('cy',py);
  }
 }
-function setMode(next){
- mode=next;hx.dataset.mode=mode;hx.querySelectorAll('.hx-mode button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
- const pane=hx.querySelector('.hx-sketchfab');pane.hidden=mode!=='model';
- if(mode==='model'){
-  const f=pane.querySelector('iframe');if(!f.src)f.src='https://sketchfab.com/models/65a813833dc04eeeb7d33bdca58c184c/embed?autostart=1&dnt=1';
- }else draw();
-}
 function setView(key){
- view=key;zoom=1;setMode('photo');img.alt=views[view].alt;
+ view=key;zoom=1;img.alt=views[view].alt;
  hx.querySelector('.hx-image-error').hidden=true;img.src='assets/quest3/'+views[view].file;
  draw();
 }
@@ -193,8 +200,6 @@ function select(id,changeView=true){
  hx.querySelectorAll('[data-hx-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hxPart===id)));
  if(changeView)setView(p.view);else draw();
 }
-hx.querySelectorAll('.hx-mode button').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
-hx.querySelector('.hx-return').addEventListener('click',()=>setMode('photo'));
 hx.querySelectorAll('[data-hx-zoom]').forEach(b=>b.addEventListener('click',()=>{zoom=Math.max(1,Math.min(2,zoom+Number(b.dataset.hxZoom)*.25));draw();}));
 hx.querySelector('#hx-reset').addEventListener('click',()=>select('usb'));
 function stepView(step){const keys=Object.keys(views),v=keys[(keys.indexOf(view)+step+keys.length)%keys.length];const first=markerParts.find(p=>p.view===v);if(first)select(first.id,false);setView(v);}
