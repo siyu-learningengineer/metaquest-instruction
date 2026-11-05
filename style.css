@@ -566,3 +566,6 @@ h1 {
     scroll-behavior: auto;
   }
 }
+
+/* Keep every course link visible, including the final knowledge check. */
+.nav-wrap{flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:10px 20px}.site-nav{flex-wrap:wrap;overflow-x:visible}.site-nav a:last-child{color:#012169}.site-nav a[aria-current="page"]{background:var(--soft)}
