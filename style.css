@@ -40,7 +40,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 3px solid #78aef8;
+  outline: 3px solid #1565d8;
   outline-offset: 4px;
 }
 
