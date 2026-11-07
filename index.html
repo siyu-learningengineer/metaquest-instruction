@@ -63,13 +63,13 @@
 
 /* Names travel with the numbered image hotspots. */
 .hx .hx-hotspot{width:max-content;max-width:calc(100% - 16px);height:auto;min-height:40px;display:flex;align-items:center;gap:8px;padding:7px 12px 7px 7px;transform:none;border:1px solid #4B9CD3;border-radius:22px;background:#4B9CD3;color:#101114;text-align:left;box-shadow:0 3px 12px #01216926;transition:background-color .18s ease}
-.hx .hx-hotspot span{width:auto;height:auto;display:block;background:none;border:0;border-radius:0;box-shadow:none;color:inherit;font-size:14px}
+.hx .hx-hotspot span{width:auto;height:auto;display:block;background:none;border:0;border-radius:0;box-shadow:none;color:inherit;font-size:12px}
 .hx .hx-hotspot .hx-hotspot-number{min-width:22px;text-align:center;font-weight:750}
 .hx .hx-hotspot .hx-hotspot-name{font-weight:600;line-height:1.35;max-width:210px}
 .hx .hx-hotspot[aria-pressed=true]{background:#012169!important;border-color:#012169;color:#fff}
 .hx .hx-hotspot[aria-pressed=true] span{background:none;box-shadow:none;color:inherit}
 .hx .hx-hotspot:hover{box-shadow:0 4px 16px #01216955}
-@media(max-width:420px){.hx .hx-hotspot .hx-hotspot-name{max-width:150px;font-size:13px}}
+@media(max-width:420px){.hx .hx-hotspot .hx-hotspot-name{max-width:150px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){.hx .hx-hotspot{transition:none}}
 /* Keep feature navigation beside the photograph without covering it. */
 .hx-layout{grid-template-columns:210px minmax(0,1fr) 280px}
@@ -167,35 +167,27 @@ const markers=markerParts.map(p=>{
 });
 function draw(){
  const v=views[view],w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;
- // Reserve separate label bands so larger text never covers the photograph.
- const active=markers.filter(m=>m.p.view===view);
- markers.forEach(m=>{m.b.hidden=m.p.view!==view;m.line.style.display=m.dot.style.display=m.p.view===view?'':'none';});
- const topHeight=active[0]?active[0].b.offsetHeight:0;
- const bottomHeight=active[1]?active[1].b.offsetHeight:0;
- const top=topHeight+24,bottom=bottomHeight?bottomHeight+24:12;
- const photoHeight=Math.max(40,h-top-bottom);
- let scale=Math.min((w-24)/v.w,photoHeight/v.h)*zoom;
- let x=(w-v.w*scale)/2,y=top+(photoHeight-v.h*scale)/2;
- if(view==='bottom'){scale=Math.min((w-45)/900,photoHeight/450)*zoom;x=w/2-1165*scale;y=top+photoHeight/2-715*scale;}
+ let scale=Math.min((w-24)/v.w,(h-24)/v.h)*zoom;
+ let x=(w-v.w*scale)/2,y=(h-v.h*scale)/2;
+ // The lower-edge view is a close-up of the same unedited front photograph.
+ if(view==='bottom'){scale=Math.min((w-45)/900,(h-70)/450)*zoom;x=w/2-1165*scale;y=h/2-715*scale;}
  if(zoom>1&&view!=='bottom'){
-  const p=markerParts.find(p=>p.id===selected&&p.view===view);
-  if(p){x=Math.min(12,Math.max(w-v.w*scale-12,w/2-p.point[0]*scale));y=top+photoHeight/2-p.point[1]*scale;}
+  const p=markerParts.find(p=>p.id===selected&&p.view===view);if(p){x=Math.min(12,Math.max(w-v.w*scale-12,w/2-p.point[0]*scale));y=Math.min(12,Math.max(h-v.h*scale-12,h/2-p.point[1]*scale));}
  }
  img.style.width=v.w*scale+'px';img.style.height=v.h*scale+'px';img.style.left=x+'px';img.style.top=y+'px';
- img.style.clipPath='inset('+Math.max(0,top-y)+'px 0 '+Math.max(0,y+v.h*scale-(h-bottom))+'px 0)';
- active.forEach(({p,b,line,dot},i)=>{
+ const placed=[];
+ for(const {p,b,line,dot} of markers){
   const px=x+p.point[0]*scale,py=y+p.point[1]*scale;
+  const visible=p.view===view&&px>=0&&py>=0&&px<=w&&py<=h;
+  b.hidden=!visible;line.style.display=dot.style.display=visible?'':'none';
+  if(!visible)continue;
   const bw=b.offsetWidth,bh=b.offsetHeight;
-  const bx=Math.max(8,Math.min(w-bw-8,px-bw/2));
-  const by=i===0?8:h-bh-8;
-  b.style.left=bx+'px';b.style.top=by+'px';
-  const visible=px>=0&&px<=w&&py>=top&&py<=h-bottom;
-  line.style.display=dot.style.display=visible?'':'none';
-  line.setAttribute('x1',px);line.setAttribute('y1',py);
-  line.setAttribute('x2',Math.max(bx+16,Math.min(bx+bw-16,px)));
-  line.setAttribute('y2',i===0?by+bh:by);
-  dot.setAttribute('cx',px);dot.setAttribute('cy',py);
- });
+  const bx=Math.max(8,Math.min(w-bw-8,px+p.offset[0]));
+  let by=Math.max(8,Math.min(h-bh-8,py+p.offset[1]-bh/2));
+  for(const r of placed){if(bx<r.x+r.w+6&&bx+bw+6>r.x&&by<r.y+r.h+6&&by+bh+6>r.y){by=r.y+r.h+8;if(by+bh>h-8)by=Math.max(8,r.y-bh-8);}}
+  placed.push({x:bx,y:by,w:bw,h:bh});
+  b.style.left=bx+'px';b.style.top=by+'px';line.setAttribute('x1',px);line.setAttribute('y1',py);line.setAttribute('x2',bx+18);line.setAttribute('y2',by+bh/2);dot.setAttribute('cx',px);dot.setAttribute('cy',py);
+ }
 }
 function setView(key){
  view=key;zoom=1;img.alt=views[view].alt;
