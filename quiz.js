@@ -16,9 +16,9 @@ form.addEventListener('submit',event=>{
   form.querySelectorAll('input[name="q'+i+'"]').forEach(input=>{input.disabled=true;input.setAttribute('aria-describedby','feedback-'+i);});
  });
  result.hidden=false;result.textContent='You scored '+score+' / 5. '+(score===5?'Well done! You have understood these key controls and setup steps.':score>=3?'Good progress. Review the explanations below, then try again.':'Review the linked lessons and explanations, then try again.');
- submit.disabled=true;result.focus();
+ submit.disabled=true;result.focus();if(score===5)window.QuestCertificate?.unlock();
 });
-form.addEventListener('reset',()=>{
+form.addEventListener('reset',()=>{window.QuestCertificate?.reset();
  form.querySelectorAll('input').forEach(input=>{input.disabled=false;input.removeAttribute('aria-describedby');});
  form.querySelectorAll('.quiz-feedback').forEach(el=>{el.hidden=true;el.replaceChildren();});
  result.hidden=true;result.textContent='';error.textContent='';progress.textContent='0 of 5 answered';submit.disabled=false;
