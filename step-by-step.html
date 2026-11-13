@@ -20,6 +20,8 @@
 .walkthrough .walkthrough-picture{min-height:0;aspect-ratio:auto;overflow:hidden;background:#fff}
 .walkthrough-picture img{display:block;width:100%;height:auto}
 .walkthrough-internet-link{display:inline-block;margin-top:24px;min-width:0}
+.step-page-links{display:flex;justify-content:space-between;gap:18px;margin-top:40px;flex-wrap:wrap}
+@media(max-width:620px){.step-page-links{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -96,6 +98,7 @@
             <div class="walkthrough-picture"><img src="assets/steps/step-5.webp" alt="Meta account setup on a phone beside the headset app menu." width="1024" height="572" loading="lazy"></div>
           </article>
         </div>
+        <nav class="step-page-links" aria-label="Related course pages"><a class="page-link" href="index.html">← Overview</a><a class="page-link" href="controller.html">Controller →</a></nav>
       </div>
     </section>
   </main>
