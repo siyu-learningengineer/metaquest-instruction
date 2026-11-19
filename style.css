@@ -586,4 +586,5 @@ main > section:last-child { padding-bottom: 20px !important; }
 main:not(:has(> section:last-child)) { padding-bottom: 20px !important; }
 
 /* Footer: copyright, no background color (all pages) */
-.site-footer { color: var(--muted) !important; background: transparent !important; border-top: 0 !important; font-size: 16px !important; }
+.site-footer { color: var(--muted) !important; background: transparent !important; border-top: 0 !important; font-size: 16px !important; padding-top: 0 !important; }
+.site-footer::before { content: ""; display: block; width: min(100%, var(--content)); height: 1px; margin: 0 auto 28px; background: var(--line); }
