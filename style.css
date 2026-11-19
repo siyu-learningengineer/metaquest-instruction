@@ -582,5 +582,5 @@ h1, h2, h3, h4, h5, h6, .brand, th, .callout > strong, .hx-topbar > strong {
 }
 
 /* Smaller gap between the last page content and the footer (all pages) */
-main > section:last-child { padding-bottom: 40px !important; }
-main:not(:has(> section:last-child)) { padding-bottom: 40px !important; }
+main > section:last-child { padding-bottom: 20px !important; }
+main:not(:has(> section:last-child)) { padding-bottom: 20px !important; }
