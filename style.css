@@ -584,3 +584,6 @@ h1, h2, h3, h4, h5, h6, .brand, th, .callout > strong, .hx-topbar > strong {
 /* Smaller gap between the last page content and the footer (all pages) */
 main > section:last-child { padding-bottom: 20px !important; }
 main:not(:has(> section:last-child)) { padding-bottom: 20px !important; }
+
+/* Footer: dark bar with copyright (all pages) */
+.site-footer { color: #ffffff !important; background: #1f2937 !important; border-top: 0 !important; font-size: 16px !important; }
